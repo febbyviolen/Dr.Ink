@@ -59,6 +59,7 @@ struct MainTabBar: View {
                                         .frame(width: 35, height: 35)
                                         .foregroundColor(.white)
                                 }
+                                .padding(.horizontal, 12.0)
                                 .offset(y: -10)
                             } else {
                                 Image(tabBarImageNames[idx])
