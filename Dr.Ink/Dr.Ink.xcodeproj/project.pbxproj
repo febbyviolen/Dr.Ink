@@ -14,6 +14,7 @@
 		8A3301B828288DD40047B9C7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301B728288DD40047B9C7 /* ViewModel.swift */; };
 		8A3301BC28288DDB0047B9C7 /* LiquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */; };
 		8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BB28288DDB0047B9C7 /* Drink.swift */; };
+		8A3301C028288E210047B9C7 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BF28288E210047B9C7 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8A3301B728288DD40047B9C7 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidModel.swift; sourceTree = "<group>"; };
 		8A3301BB28288DDB0047B9C7 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		8A3301BF28288E210047B9C7 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				8A3301B928288DDB0047B9C7 /* Model */,
 				8A3301B628288DD40047B9C7 /* ViewModel */,
+				8A3301BE28288DFE0047B9C7 /* View */,
 				8A3301A828288CE40047B9C7 /* Dr_InkApp.swift */,
 				8A3301AA28288CE40047B9C7 /* ContentView.swift */,
 				8A3301AC28288CE50047B9C7 /* Assets.xcassets */,
@@ -90,6 +93,14 @@
 				8A3301BB28288DDB0047B9C7 /* Drink.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8A3301BE28288DFE0047B9C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A3301BF28288E210047B9C7 /* Background.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				8A3301B828288DD40047B9C7 /* ViewModel.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
+				8A3301C028288E210047B9C7 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
