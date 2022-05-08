@@ -15,6 +15,8 @@
 		8A3301BC28288DDB0047B9C7 /* LiquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */; };
 		8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BB28288DDB0047B9C7 /* Drink.swift */; };
 		8A3301C028288E210047B9C7 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BF28288E210047B9C7 /* Background.swift */; };
+		8A3301C428288E420047B9C7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C228288E420047B9C7 /* Challenge.swift */; };
+		8A3301C528288E420047B9C7 /* ChallengeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C328288E420047B9C7 /* ChallengeModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidModel.swift; sourceTree = "<group>"; };
 		8A3301BB28288DDB0047B9C7 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		8A3301BF28288E210047B9C7 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		8A3301C228288E420047B9C7 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		8A3301C328288E420047B9C7 /* ChallengeModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				8A3301BF28288E210047B9C7 /* Background.swift */,
+				8A3301C128288E420047B9C7 /* ChallengeScreen */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8A3301C128288E420047B9C7 /* ChallengeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A3301C228288E420047B9C7 /* Challenge.swift */,
+				8A3301C328288E420047B9C7 /* ChallengeModal.swift */,
+			);
+			path = ChallengeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,12 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3301C428288E420047B9C7 /* Challenge.swift in Sources */,
 				8A3301AB28288CE40047B9C7 /* ContentView.swift in Sources */,
 				8A3301BC28288DDB0047B9C7 /* LiquidModel.swift in Sources */,
 				8A3301B828288DD40047B9C7 /* ViewModel.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
 				8A3301C028288E210047B9C7 /* Background.swift in Sources */,
+				8A3301C528288E420047B9C7 /* ChallengeModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
