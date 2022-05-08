@@ -11,7 +11,7 @@ import SwiftUI
 struct Dr_InkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabBar()
         }
     }
 }
