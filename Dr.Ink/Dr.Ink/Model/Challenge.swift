@@ -1,5 +1,5 @@
 //
-//  ChallengeDetail.swift
+//  Challenge.swift
 //  Dr.Ink
 //
 //  Created by Inwoo Park on 2022/05/09.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ChallengeDetail: Hashable {
+enum Challenge: Hashable {
     case rowCaffeine, sugarFree
     
     var title: String {

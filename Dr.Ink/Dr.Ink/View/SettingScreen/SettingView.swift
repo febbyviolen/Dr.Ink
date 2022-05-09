@@ -1,5 +1,5 @@
 //
-//  Setting.swift
+//  SettingView.swift
 //  Dr.Ink
 //
 //  Created by Inwoo Park on 2022/05/09.
@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct Setting: View {
+struct SettingView: View {
     var body: some View {
-        Text("설정")
+        VStack {
+            Spacer()
+            Text("설정")
+            Spacer()
+        }
     }
 }
 
 struct Setting_Previews: PreviewProvider {
     static var previews: some View {
-        Setting()
+        SettingView()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Water.swift
+//  WaterView.swift
 //  Dr.Ink
 //
 //  Created by Ebbyy on 2022/05/03.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Water: View {
+struct WaterView: View {
     
     @Binding var shouldShowModal: Bool
     let drinks: [Drink]
@@ -71,11 +71,11 @@ struct Water: View {
 //MARK : PREVIEWS
 struct Water_Previews: PreviewProvider {
     static var previews: some View {
-        Water(shouldShowModal: .constant(false), drinks: [.water, .greenTea, .coffee])
+        WaterView(shouldShowModal: .constant(false), drinks: [.water, .greenTea, .coffee])
     }
 }
 
-extension Water{
+extension WaterView{
     private func ChooseDrink(drink: Drink) -> some View {
         VStack(){
             Spacer()

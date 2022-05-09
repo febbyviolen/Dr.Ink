@@ -12,18 +12,19 @@
 		8A3301B028288CE50047B9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3301AF28288CE50047B9C7 /* Preview Assets.xcassets */; };
 		8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BB28288DDB0047B9C7 /* Drink.swift */; };
 		8A3301C028288E210047B9C7 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BF28288E210047B9C7 /* Background.swift */; };
-		8A3301C428288E420047B9C7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C228288E420047B9C7 /* Challenge.swift */; };
+		8A3301C428288E420047B9C7 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C228288E420047B9C7 /* ChallengeView.swift */; };
 		8A3301C528288E420047B9C7 /* MainModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C328288E420047B9C7 /* MainModal.swift */; };
 		8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */; };
-		8A3301CA28288E5F0047B9C7 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C828288E5F0047B9C7 /* Water.swift */; };
-		8A3301CE28288E7E0047B9C7 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301CC28288E7E0047B9C7 /* Plant.swift */; };
+		8A3301CA28288E5F0047B9C7 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C828288E5F0047B9C7 /* WaterView.swift */; };
+		8A3301CE28288E7E0047B9C7 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301CC28288E7E0047B9C7 /* PlantView.swift */; };
 		8A3301CF28288E7E0047B9C7 /* HorizontalWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301CD28288E7E0047B9C7 /* HorizontalWave.swift */; };
 		8A3301D228288E940047B9C7 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D128288E940047B9C7 /* MainTabBar.swift */; };
 		8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D6282891BC0047B9C7 /* ChallengeContent.swift */; };
 		8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D8282891FD0047B9C7 /* ModalContent.swift */; };
-		8A3301DB2828944C0047B9C7 /* ChallengeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */; };
-		8A3301DF28289AC30047B9C7 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DE28289AC30047B9C7 /* Setting.swift */; };
-		8A3301E228289AD70047B9C7 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E128289AD70047B9C7 /* Calendar.swift */; };
+		8A3301DB2828944C0047B9C7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DA2828944C0047B9C7 /* Challenge.swift */; };
+		8A3301DF28289AC30047B9C7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DE28289AC30047B9C7 /* SettingView.swift */; };
+		8A3301E228289AD70047B9C7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E128289AD70047B9C7 /* CalendarView.swift */; };
+		8A3301E42828EE370047B9C7 /* DailyIntake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E32828EE370047B9C7 /* DailyIntake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,18 +34,19 @@
 		8A3301AF28288CE50047B9C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A3301BB28288DDB0047B9C7 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		8A3301BF28288E210047B9C7 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		8A3301C228288E420047B9C7 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		8A3301C228288E420047B9C7 /* ChallengeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		8A3301C328288E420047B9C7 /* MainModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModal.swift; sourceTree = "<group>"; };
 		8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveAnimation.swift; sourceTree = "<group>"; };
-		8A3301C828288E5F0047B9C7 /* Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
-		8A3301CC28288E7E0047B9C7 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		8A3301C828288E5F0047B9C7 /* WaterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		8A3301CC28288E7E0047B9C7 /* PlantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
 		8A3301CD28288E7E0047B9C7 /* HorizontalWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalWave.swift; sourceTree = "<group>"; };
 		8A3301D128288E940047B9C7 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		8A3301D6282891BC0047B9C7 /* ChallengeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeContent.swift; sourceTree = "<group>"; };
 		8A3301D8282891FD0047B9C7 /* ModalContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContent.swift; sourceTree = "<group>"; };
-		8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetail.swift; sourceTree = "<group>"; };
-		8A3301DE28289AC30047B9C7 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
-		8A3301E128289AD70047B9C7 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		8A3301DA2828944C0047B9C7 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		8A3301DE28289AC30047B9C7 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		8A3301E128289AD70047B9C7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		8A3301E32828EE370047B9C7 /* DailyIntake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIntake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				8A3301BB28288DDB0047B9C7 /* Drink.swift */,
-				8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */,
+				8A3301DA2828944C0047B9C7 /* Challenge.swift */,
+				8A3301E32828EE370047B9C7 /* DailyIntake.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,7 +123,7 @@
 		8A3301C128288E420047B9C7 /* ChallengeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301C228288E420047B9C7 /* Challenge.swift */,
+				8A3301C228288E420047B9C7 /* ChallengeView.swift */,
 				8A3301D6282891BC0047B9C7 /* ChallengeContent.swift */,
 			);
 			path = ChallengeScreen;
@@ -129,7 +132,7 @@
 		8A3301C628288E5F0047B9C7 /* WaterScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301C828288E5F0047B9C7 /* Water.swift */,
+				8A3301C828288E5F0047B9C7 /* WaterView.swift */,
 				8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */,
 			);
 			path = WaterScreen;
@@ -138,7 +141,7 @@
 		8A3301CB28288E7E0047B9C7 /* PlantScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301CC28288E7E0047B9C7 /* Plant.swift */,
+				8A3301CC28288E7E0047B9C7 /* PlantView.swift */,
 				8A3301CD28288E7E0047B9C7 /* HorizontalWave.swift */,
 			);
 			path = PlantScreen;
@@ -157,7 +160,7 @@
 		8A3301DC28289A730047B9C7 /* CalendarScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301E128289AD70047B9C7 /* Calendar.swift */,
+				8A3301E128289AD70047B9C7 /* CalendarView.swift */,
 			);
 			path = CalendarScreen;
 			sourceTree = "<group>";
@@ -165,7 +168,7 @@
 		8A3301DD28289A8E0047B9C7 /* SettingScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301DE28289AC30047B9C7 /* Setting.swift */,
+				8A3301DE28289AC30047B9C7 /* SettingView.swift */,
 			);
 			path = SettingScreen;
 			sourceTree = "<group>";
@@ -241,20 +244,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A3301CF28288E7E0047B9C7 /* HorizontalWave.swift in Sources */,
-				8A3301C428288E420047B9C7 /* Challenge.swift in Sources */,
+				8A3301C428288E420047B9C7 /* ChallengeView.swift in Sources */,
 				8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */,
-				8A3301CE28288E7E0047B9C7 /* Plant.swift in Sources */,
-				8A3301CA28288E5F0047B9C7 /* Water.swift in Sources */,
-				8A3301DF28289AC30047B9C7 /* Setting.swift in Sources */,
+				8A3301CE28288E7E0047B9C7 /* PlantView.swift in Sources */,
+				8A3301CA28288E5F0047B9C7 /* WaterView.swift in Sources */,
+				8A3301DF28289AC30047B9C7 /* SettingView.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
 				8A3301C028288E210047B9C7 /* Background.swift in Sources */,
 				8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */,
+				8A3301E42828EE370047B9C7 /* DailyIntake.swift in Sources */,
 				8A3301C528288E420047B9C7 /* MainModal.swift in Sources */,
-				8A3301E228289AD70047B9C7 /* Calendar.swift in Sources */,
+				8A3301E228289AD70047B9C7 /* CalendarView.swift in Sources */,
 				8A3301D228288E940047B9C7 /* MainTabBar.swift in Sources */,
-				8A3301DB2828944C0047B9C7 /* ChallengeDetail.swift in Sources */,
+				8A3301DB2828944C0047B9C7 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

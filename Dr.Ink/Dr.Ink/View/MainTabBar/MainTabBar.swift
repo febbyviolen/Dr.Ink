@@ -20,18 +20,18 @@ struct MainTabBar: View {
             VStack {
                 ZStack {
                     Spacer().fullScreenCover(isPresented: $shouldShowWaterFullScreen, content: {
-                            Water(shouldShowModal: $shouldShowWaterFullScreen, drinks: [.water, .greenTea, .coffee])
+                            WaterView(shouldShowModal: $shouldShowWaterFullScreen, drinks: [.water, .greenTea, .coffee])
                     })
                     
                     switch selectedIndex {
                     case 0:
-                        Plant()
+                        PlantView()
                     case 1:
-                        Calendar()
+                        CalendarView()
                     case 3:
-                        Challenge(showModal: $shouldShowMainModal, modalContent: $modalContent)
+                        ChallengeView(showModal: $shouldShowMainModal, modalContent: $modalContent)
                     case 4:
-                        Setting()
+                        SettingView()
                     default:
                         Text("Error")
                     }

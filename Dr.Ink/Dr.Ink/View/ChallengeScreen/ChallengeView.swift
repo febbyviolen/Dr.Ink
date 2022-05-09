@@ -1,5 +1,5 @@
 //
-//  Challenge.swift
+//  ChallengeView.swift
 //  Dr.Ink
 //
 //  Created by Inwoo Park on 2022/05/09.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Challenge: View {
+struct ChallengeView: View {
     @Binding var showModal: Bool
     @Binding var modalContent: ModalContent?
     
@@ -79,7 +79,7 @@ struct Challenge: View {
 
 struct Challenge_Previews: PreviewProvider {
     static var previews: some View {
-        Challenge(showModal: .constant(false), modalContent: .constant(nil))
+        ChallengeView(showModal: .constant(false), modalContent: .constant(nil))
     }
 }
 

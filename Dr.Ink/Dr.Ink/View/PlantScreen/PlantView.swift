@@ -1,5 +1,5 @@
 //
-//  Plant.swift
+//  PlantView.swift
 //  Dr.Ink
 //
 //  Created by Ebbyy on 2022/05/02.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Plant: View {
+struct PlantView: View {
     
     @State var progress : CGFloat = 0
     @State var startAnimation : CGFloat = 0.0
@@ -74,7 +74,7 @@ struct Plant: View {
 
 struct Main__Previews: PreviewProvider {
     static var previews: some View {
-        Plant()
+        PlantView()
     }
 }
 

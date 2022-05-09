@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChallengeContent: View {
-    let detail: ChallengeDetail
+    let detail: Challenge
     
     var body: some View {
         ZStack {
