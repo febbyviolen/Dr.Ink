@@ -24,6 +24,8 @@
 		8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D6282891BC0047B9C7 /* ChallengeContent.swift */; };
 		8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D8282891FD0047B9C7 /* ModalContent.swift */; };
 		8A3301DB2828944C0047B9C7 /* ChallengeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */; };
+		8A3301DF28289AC30047B9C7 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DE28289AC30047B9C7 /* Setting.swift */; };
+		8A3301E228289AD70047B9C7 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E128289AD70047B9C7 /* Calendar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		8A3301D6282891BC0047B9C7 /* ChallengeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeContent.swift; sourceTree = "<group>"; };
 		8A3301D8282891FD0047B9C7 /* ModalContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContent.swift; sourceTree = "<group>"; };
 		8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetail.swift; sourceTree = "<group>"; };
+		8A3301DE28289AC30047B9C7 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		8A3301E128289AD70047B9C7 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +123,10 @@
 				8A3301BF28288E210047B9C7 /* Background.swift */,
 				8A3301D028288E940047B9C7 /* MainTabBar */,
 				8A3301CB28288E7E0047B9C7 /* PlantScreen */,
+				8A3301DC28289A730047B9C7 /* CalendarScreen */,
 				8A3301C628288E5F0047B9C7 /* WaterScreen */,
 				8A3301C128288E420047B9C7 /* ChallengeScreen */,
+				8A3301DD28289A8E0047B9C7 /* SettingScreen */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,8 +143,8 @@
 		8A3301C628288E5F0047B9C7 /* WaterScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */,
 				8A3301C828288E5F0047B9C7 /* Water.swift */,
+				8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */,
 			);
 			path = WaterScreen;
 			sourceTree = "<group>";
@@ -160,6 +166,22 @@
 				8A3301D8282891FD0047B9C7 /* ModalContent.swift */,
 			);
 			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		8A3301DC28289A730047B9C7 /* CalendarScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A3301E128289AD70047B9C7 /* Calendar.swift */,
+			);
+			path = CalendarScreen;
+			sourceTree = "<group>";
+		};
+		8A3301DD28289A8E0047B9C7 /* SettingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A3301DE28289AC30047B9C7 /* Setting.swift */,
+			);
+			path = SettingScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +260,7 @@
 				8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */,
 				8A3301CE28288E7E0047B9C7 /* Plant.swift in Sources */,
 				8A3301CA28288E5F0047B9C7 /* Water.swift in Sources */,
+				8A3301DF28289AC30047B9C7 /* Setting.swift in Sources */,
 				8A3301B828288DD40047B9C7 /* ViewModel.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */,
@@ -245,6 +268,7 @@
 				8A3301C028288E210047B9C7 /* Background.swift in Sources */,
 				8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */,
 				8A3301C528288E420047B9C7 /* MainModal.swift in Sources */,
+				8A3301E228289AD70047B9C7 /* Calendar.swift in Sources */,
 				8A3301D228288E940047B9C7 /* MainTabBar.swift in Sources */,
 				8A3301DB2828944C0047B9C7 /* ChallengeDetail.swift in Sources */,
 			);

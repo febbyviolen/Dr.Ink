@@ -27,11 +27,11 @@ struct MainTabBar: View {
                     case 0:
                         Plant()
                     case 1:
-                        Challenge(showModal: $shouldShowMainModal, modalContent: $modalContent)
+                        Calendar()
                     case 3:
                         Challenge(showModal: $shouldShowMainModal, modalContent: $modalContent)
                     case 4:
-                        Challenge(showModal: $shouldShowMainModal, modalContent: $modalContent)
+                        Setting()
                     default:
                         Text("Error")
                     }
