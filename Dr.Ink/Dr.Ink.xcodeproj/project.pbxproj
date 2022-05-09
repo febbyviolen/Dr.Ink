@@ -24,7 +24,8 @@
 		8A3301DB2828944C0047B9C7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DA2828944C0047B9C7 /* Challenge.swift */; };
 		8A3301DF28289AC30047B9C7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DE28289AC30047B9C7 /* SettingView.swift */; };
 		8A3301E228289AD70047B9C7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E128289AD70047B9C7 /* CalendarView.swift */; };
-		8A3301E42828EE370047B9C7 /* DailyIntake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E32828EE370047B9C7 /* DailyIntake.swift */; };
+		8A3301E72828F5300047B9C7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E52828F5300047B9C7 /* DataModel.xcdatamodeld */; };
+		8A3301EA2828F7090047B9C7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E92828F7090047B9C7 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,8 @@
 		8A3301DA2828944C0047B9C7 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8A3301DE28289AC30047B9C7 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		8A3301E128289AD70047B9C7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		8A3301E32828EE370047B9C7 /* DailyIntake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIntake.swift; sourceTree = "<group>"; };
+		8A3301E62828F5300047B9C7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		8A3301E92828F7090047B9C7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		8A3301A728288CE40047B9C7 /* Dr.Ink */ = {
 			isa = PBXGroup;
 			children = (
+				8A3301E82828F6790047B9C7 /* Data */,
 				8A3301B928288DDB0047B9C7 /* Model */,
 				8A3301BE28288DFE0047B9C7 /* View */,
 				8A3301A828288CE40047B9C7 /* Dr_InkApp.swift */,
@@ -101,7 +104,6 @@
 			children = (
 				8A3301BB28288DDB0047B9C7 /* Drink.swift */,
 				8A3301DA2828944C0047B9C7 /* Challenge.swift */,
-				8A3301E32828EE370047B9C7 /* DailyIntake.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +173,15 @@
 				8A3301DE28289AC30047B9C7 /* SettingView.swift */,
 			);
 			path = SettingScreen;
+			sourceTree = "<group>";
+		};
+		8A3301E82828F6790047B9C7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8A3301E52828F5300047B9C7 /* DataModel.xcdatamodeld */,
+				8A3301E92828F7090047B9C7 /* CoreDataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,8 @@
 				8A3301C428288E420047B9C7 /* ChallengeView.swift in Sources */,
 				8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */,
 				8A3301CE28288E7E0047B9C7 /* PlantView.swift in Sources */,
+				8A3301EA2828F7090047B9C7 /* CoreDataManager.swift in Sources */,
+				8A3301E72828F5300047B9C7 /* DataModel.xcdatamodeld in Sources */,
 				8A3301CA28288E5F0047B9C7 /* WaterView.swift in Sources */,
 				8A3301DF28289AC30047B9C7 /* SettingView.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
@@ -254,7 +267,6 @@
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
 				8A3301C028288E210047B9C7 /* Background.swift in Sources */,
 				8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */,
-				8A3301E42828EE370047B9C7 /* DailyIntake.swift in Sources */,
 				8A3301C528288E420047B9C7 /* MainModal.swift in Sources */,
 				8A3301E228289AD70047B9C7 /* CalendarView.swift in Sources */,
 				8A3301D228288E940047B9C7 /* MainTabBar.swift in Sources */,
@@ -457,6 +469,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8A3301E52828F5300047B9C7 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A3301E62828F5300047B9C7 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 8A3301E62828F5300047B9C7 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8A33019D28288CE40047B9C7 /* Project object */;
 }

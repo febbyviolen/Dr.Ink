@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlantView: View {
+
+    @Environment(\.managedObjectContext) var context
     
     @State var progress : CGFloat = 0
     @State var startAnimation : CGFloat = 0.0

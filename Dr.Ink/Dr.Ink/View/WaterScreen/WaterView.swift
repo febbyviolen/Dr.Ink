@@ -9,6 +9,8 @@ import SwiftUI
 
 struct WaterView: View {
     
+    @Environment(\.managedObjectContext) var context
+    
     @Binding var shouldShowModal: Bool
     let drinks: [Drink]
     

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SettingView: View {
+    
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
         VStack {
             Spacer()

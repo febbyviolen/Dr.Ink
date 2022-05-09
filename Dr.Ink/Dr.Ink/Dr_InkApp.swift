@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Dr_InkApp: App {
+    let manager = CoreDataManager.shared
+    
     var body: some Scene {
         WindowGroup {
             MainTabBar()
+                .environment(\.managedObjectContext, manager.mainContext)
         }
     }
 }
