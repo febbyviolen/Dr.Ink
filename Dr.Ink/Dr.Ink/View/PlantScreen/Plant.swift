@@ -52,7 +52,16 @@ struct Plant: View {
                 
                 VStack{
                     Spacer()
-                    Image(getImageName())
+                    Image({
+                        switch progress {
+                        case progress where progress < 0.4: return "Seed"
+                        case progress where progress < 0.7 : return "LittleSprout"
+                        case progress where progress < 1.0 : return "BigSprout"
+                        case progress where progress == 1.0 : return "Tulip"
+                        default:
+                            return "Tulip"
+                        }
+                    }())
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
@@ -67,25 +76,6 @@ struct Main__Previews: PreviewProvider {
     static var previews: some View {
         Plant()
     }
-}
-    
-extension Plant{
-    
-    func getProgress(){
-        progress = 0
-    }
-    
-    func getImageName()->String {
-        switch progress {
-        case progress where progress < 0.4: return "Seed"
-        case progress where progress < 0.7 : return "LittleSprout"
-        case progress where progress < 1.0 : return "BigSprout"
-        case progress where progress == 1.0 : return "Tulip"
-        default:
-            return "Tulip"
-        }
-    }
-    
 }
 
 
