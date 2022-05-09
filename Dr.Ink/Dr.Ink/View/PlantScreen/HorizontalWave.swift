@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct HorizontalWave: View {
+    @FetchRequest(
+            entity: DailyWater.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \DailyWater.date, ascending: true)],
+            predicate: NSPredicate(format: "date >= %@ && date <= %@", Calendar.current.startOfDay(for: Date()) as CVarArg, Calendar.current.startOfDay(for: Date() + 86400 ) as CVarArg),
+            animation: .default)
+    var dailyWaterList: FetchedResults<DailyWater>
+
+    @Environment(\.managedObjectContext) var context
     
-    @Binding var progress: CGFloat
     @Binding var startAnimation: CGFloat
     @State var isAnimating = false
     
@@ -20,7 +27,7 @@ struct HorizontalWave: View {
             let size = proxy.size
             
             ZStack{
-                wave(progress: progress, waveHeight: 0.02, offset: startAnimation)
+                wave(progress: CGFloat((dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal)), waveHeight: 0.02, offset: startAnimation)
                     .fill(Color("LightLightBlue"))
                     .mask{
                         Rectangle()
@@ -42,7 +49,7 @@ struct HorizontalWave: View {
 
 struct HorizontalWave_Previews: PreviewProvider {
     static var previews: some View {
-        HorizontalWave(progress: .constant(0), startAnimation: .constant(0))
+        HorizontalWave(startAnimation: .constant(0))
             .previewLayout(.sizeThatFits)
     }
 }

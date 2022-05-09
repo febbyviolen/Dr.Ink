@@ -17,9 +17,8 @@ struct PlantView: View {
 
     @Environment(\.managedObjectContext) var context
     
-    @State var progress : CGFloat = 0
-    @State var startAnimation : CGFloat = 0.0
-    @State var goal : Int = 2000
+    @State var startAnimation: CGFloat = 0.0
+    @State var goal: Int = 2000
     
     var body: some View {
         ZStack{
@@ -42,14 +41,14 @@ struct PlantView: View {
                         .shadow(color: .gray, radius: 3, x: 1, y: 3)
                         
                     VStack{
-                        HorizontalWave(progress: $progress, startAnimation: $startAnimation)
+                        HorizontalWave(startAnimation: $startAnimation)
                         .frame(width: 159, height: 290)
                     }
                     .frame(width: UIScreen.main.bounds.width, height: 150)
                     
                     HStack(){
                         Spacer()
-                        Text("\(Int(progress*100))%")
+                        Text("\(Int((dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) * 100 / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal)))%")
                             .bold()
                             .font(.title3)
                             .foregroundColor(Color("DarkDarkBlue"))
@@ -60,12 +59,13 @@ struct PlantView: View {
                 VStack{
                     Spacer()
                     Image({
-                        switch progress {
-                        case progress where progress < 0.4: return "Seed"
-                        case progress where progress < 0.7 : return "LittleSprout"
-                        case progress where progress < 1.0 : return "BigSprout"
-                        case progress where progress == 1.0 : return "Tulip"
-                        default:
+                        if (dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal) < 0.4 {
+                            return "Seed"
+                        } else if (dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal) < 0.7 {
+                            return "LittleSprout"
+                        } else if (dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal) < 1.0 {
+                            return "BigSprout"
+                        } else {
                             return "Tulip"
                         }
                     }())
@@ -81,15 +81,13 @@ struct PlantView: View {
                 today.id = UUID()
                 today.date = Date()
                 today.intake = 0
-                today.goal = 1000
+                today.goal = 2000
 
                 do {
                     try context.save()
                 } catch {
                     print(error)
                 }
-            } else {
-                progress = CGFloat(dailyWaterList.first!.intake / dailyWaterList.first!.goal)
             }
         }
     }
