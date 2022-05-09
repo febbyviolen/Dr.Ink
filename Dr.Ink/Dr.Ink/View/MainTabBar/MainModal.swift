@@ -23,9 +23,9 @@ struct MainModal: View {
                 VStack {
                     switch content {
                     case .challengeLowCaffeine:
-                        Text("저카페인")
+                        ChallengeContent(detail: .rowCaffeine)
                     case .challengeSugarFree:
-                        Text("무설탕")
+                        ChallengeContent(detail: .sugarFree)
                     default:
                         Text("Error")
                     }
