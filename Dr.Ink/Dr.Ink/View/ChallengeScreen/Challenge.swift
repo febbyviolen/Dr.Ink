@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Challenge: View {
     @Binding var showModal: Bool
+    @Binding var modalContent: ModalContent?
     
     var body: some View{
         ZStack {
@@ -23,6 +24,7 @@ struct Challenge: View {
                     
 
                 Button(action: {
+                    modalContent = .challengeSugarFree
                     showModal = true
                 }, label: {
                     HStack(alignment: .center, spacing: 10) {
@@ -47,6 +49,7 @@ struct Challenge: View {
                
                 
                 Button(action: {
+                    modalContent = .challengeLowCaffeine
                     showModal = true
                 }, label: {
                     HStack(alignment: .center, spacing: 5) {
@@ -76,7 +79,7 @@ struct Challenge: View {
 
 struct Challenge_Previews: PreviewProvider {
     static var previews: some View {
-        Challenge(showModal: .constant(false))
+        Challenge(showModal: .constant(false), modalContent: .constant(nil))
     }
 }
 
