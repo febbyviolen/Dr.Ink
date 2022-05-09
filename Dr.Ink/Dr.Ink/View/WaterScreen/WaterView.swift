@@ -131,6 +131,7 @@ extension WaterView{
             
             Button(action: {
                 addButtonPressed()
+                shouldShowModal = false
             }, label: {
                 Text("+ 추가")
                     .fontWeight(.bold)

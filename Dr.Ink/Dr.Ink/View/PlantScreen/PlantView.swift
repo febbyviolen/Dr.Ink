@@ -71,7 +71,7 @@ struct PlantView: View {
                     }())
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 200, height: 200)
+                        .frame(width: UIScreen.main.bounds.height*2/5, height: UIScreen.main.bounds.height*2/5)
                 }
                 Spacer()
             }
