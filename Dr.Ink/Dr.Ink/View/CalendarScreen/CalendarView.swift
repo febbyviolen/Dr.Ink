@@ -16,10 +16,7 @@ struct CalendarView: View {
             Background()
             
             VStack {
-                Text("기록")
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("DarkDarkBlue"))
-                    .font(.title)
+                Spacer()
                 Divider()
                 ScrollView {
                     LazyVStack {
@@ -30,6 +27,8 @@ struct CalendarView: View {
                         }
                     }                    
                 }
+                Divider()
+                Spacer()
             }
             .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: .infinity, alignment: .top)
             

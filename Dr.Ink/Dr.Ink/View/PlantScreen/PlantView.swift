@@ -25,15 +25,12 @@ struct PlantView: View {
             Background()
             VStack(spacing: 10){
                 Spacer()
+                Text("오늘의 목표")
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("DarkDarkBlue"))
+                    .font(.title)
+                
                 ZStack{
-                    VStack{
-                        Text("오늘의 목표")
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("DarkDarkBlue"))
-                            .font(.title)
-                        Spacer()
-                    }.frame(width: UIScreen.main.bounds.width, height: 160)
-                    
                     RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.white, lineWidth: 5)
                         .foregroundColor(Color.black.opacity(0))
