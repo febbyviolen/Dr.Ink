@@ -18,7 +18,7 @@ struct Water: View {
     @State var startAnimation : CGFloat = 0.0
     @State var ml : Int = 0
     @State var fillColor = Color("LightLightBlue")
-    @State var Drinkselected : Drink = .Water
+    @State var Drinkselected : Drink = .water
     
     var body: some View {
         VStack(spacing: 5) {
@@ -73,7 +73,7 @@ struct Water: View {
 //MARK : PREVIEWS
 struct Water_Previews: PreviewProvider {
     static var previews: some View {
-        Water(shouldShowModal: .constant(false), drinks: [.Water, .GreenTea, .Coffee])
+        Water(shouldShowModal: .constant(false), drinks: [.water, .greenTea, .coffee])
     }
 }
 

@@ -10,5 +10,4 @@ import Foundation
 enum ModalContent {
     case challengeLowCaffeine
     case challengeSugarFree
-    case alarm
 }

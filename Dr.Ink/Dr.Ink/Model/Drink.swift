@@ -9,40 +9,39 @@ import Foundation
 import SwiftUI
 
 enum Drink: Hashable {
-    case Water, GreenTea, Coffee
+    case water, greenTea, coffee
     
     var imageName: String{
         switch self {
-        case .Water:
+        case .water:
             return "WaterImg"
-        case .GreenTea:
+        case .greenTea:
             return "GreenTeaImg"
-        case .Coffee:
+        case .coffee:
             return "CoffeeImg"
         }
     }
     
     var label: String{
         switch self {
-        case .Water:
+        case .water:
             return "물"
-        case .GreenTea:
+        case .greenTea:
             return "녹차"
-        case .Coffee:
+        case .coffee:
             return "커피"
         }
     }
     
     var color: Color{
         switch self {
-        case .Water:
+        case .water:
             return Color("LightLightBlue")
-        case .GreenTea:
+        case .greenTea:
             return Color("LightGreen")
-        case .Coffee:
+        case .coffee:
             return Color("CoffeeBrown")
         }
     }
-    
 }
 

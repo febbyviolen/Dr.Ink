@@ -17,12 +17,13 @@
 		8A3301C428288E420047B9C7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C228288E420047B9C7 /* Challenge.swift */; };
 		8A3301C528288E420047B9C7 /* MainModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C328288E420047B9C7 /* MainModal.swift */; };
 		8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */; };
-		8A3301CA28288E5F0047B9C7 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C828288E5F0047B9C7 /* Water.swift */; };
+		8A3301CA28288E5F0047B9C7 /* water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C828288E5F0047B9C7 /* water.swift */; };
 		8A3301CE28288E7E0047B9C7 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301CC28288E7E0047B9C7 /* Plant.swift */; };
 		8A3301CF28288E7E0047B9C7 /* HorizontalWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301CD28288E7E0047B9C7 /* HorizontalWave.swift */; };
 		8A3301D228288E940047B9C7 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D128288E940047B9C7 /* MainTabBar.swift */; };
 		8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D6282891BC0047B9C7 /* ChallengeContent.swift */; };
 		8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301D8282891FD0047B9C7 /* ModalContent.swift */; };
+		8A3301DB2828944C0047B9C7 /* ChallengeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +38,13 @@
 		8A3301C228288E420047B9C7 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8A3301C328288E420047B9C7 /* MainModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModal.swift; sourceTree = "<group>"; };
 		8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveAnimation.swift; sourceTree = "<group>"; };
-		8A3301C828288E5F0047B9C7 /* Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		8A3301C828288E5F0047B9C7 /* water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = water.swift; sourceTree = "<group>"; };
 		8A3301CC28288E7E0047B9C7 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		8A3301CD28288E7E0047B9C7 /* HorizontalWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalWave.swift; sourceTree = "<group>"; };
 		8A3301D128288E940047B9C7 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		8A3301D6282891BC0047B9C7 /* ChallengeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeContent.swift; sourceTree = "<group>"; };
 		8A3301D8282891FD0047B9C7 /* ModalContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalContent.swift; sourceTree = "<group>"; };
+		8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */,
 				8A3301BB28288DDB0047B9C7 /* Drink.swift */,
+				8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */,
-				8A3301C828288E5F0047B9C7 /* Water.swift */,
+				8A3301C828288E5F0047B9C7 /* water.swift */,
 			);
 			path = WaterScreen;
 			sourceTree = "<group>";
@@ -234,7 +237,7 @@
 				8A3301BC28288DDB0047B9C7 /* LiquidModel.swift in Sources */,
 				8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */,
 				8A3301CE28288E7E0047B9C7 /* Plant.swift in Sources */,
-				8A3301CA28288E5F0047B9C7 /* Water.swift in Sources */,
+				8A3301CA28288E5F0047B9C7 /* water.swift in Sources */,
 				8A3301B828288DD40047B9C7 /* ViewModel.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */,
@@ -243,6 +246,7 @@
 				8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */,
 				8A3301C528288E420047B9C7 /* MainModal.swift in Sources */,
 				8A3301D228288E940047B9C7 /* MainTabBar.swift in Sources */,
+				8A3301DB2828944C0047B9C7 /* ChallengeDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
