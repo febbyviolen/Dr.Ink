@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct WaterView: View {
+    @FetchRequest(
+            entity: DailyWater.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \DailyWater.date, ascending: true)],
+            predicate: NSPredicate(format: "date >= %@ && date <= %@", Calendar.current.startOfDay(for: Date()) as CVarArg, Calendar.current.startOfDay(for: Date() + 86400 ) as CVarArg),
+            animation: .default)
+    var dailyWaterList: FetchedResults<DailyWater>
     
     @Environment(\.managedObjectContext) var context
     
@@ -141,7 +147,13 @@ extension WaterView{
     }
     
     func addButtonPressed() {
-        progress = 0
-        ml = 0
+        dailyWaterList.first!.setValue(dailyWaterList.first!.intake + Float(ml), forKey: "intake")
+        do {
+            try context.save()
+            progress = 0
+            ml = 0
+        } catch {
+            print(error)
+        }
     }
 }

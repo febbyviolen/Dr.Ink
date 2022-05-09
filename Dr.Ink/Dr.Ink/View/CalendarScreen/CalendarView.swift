@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @FetchRequest(sortDescriptors: [SortDescriptor(\DailyWater.date, order: .forward)])
+    var dailyWaterList: FetchedResults<DailyWater>
+    
     var body: some View {
         VStack {
             Spacer()
-            Text("달력")
+            List {
+                ForEach(dailyWaterList) { dailyWater in
+                    Text("\(dailyWater.date!)")
+                    Text("\(Int(dailyWater.intake)) / \(Int(dailyWater.goal))")
+                }
+            }
             Spacer()
         }
     }

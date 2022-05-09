@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct PlantView: View {
+    @FetchRequest(
+            entity: DailyWater.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \DailyWater.date, ascending: true)],
+            predicate: NSPredicate(format: "date >= %@ && date <= %@", Calendar.current.startOfDay(for: Date()) as CVarArg, Calendar.current.startOfDay(for: Date() + 86400 ) as CVarArg),
+            animation: .default)
+    var dailyWaterList: FetchedResults<DailyWater>
 
     @Environment(\.managedObjectContext) var context
     
@@ -16,7 +22,6 @@ struct PlantView: View {
     @State var goal : Int = 2000
     
     var body: some View {
-        
         ZStack{
             Background()
             VStack(spacing: 10){
@@ -37,7 +42,7 @@ struct PlantView: View {
                         .shadow(color: .gray, radius: 3, x: 1, y: 3)
                         
                     VStack{
-                        HorizontalWave(progress: progress, startAnimation: $startAnimation)
+                        HorizontalWave(progress: $progress, startAnimation: $startAnimation)
                         .frame(width: 159, height: 290)
                     }
                     .frame(width: UIScreen.main.bounds.width, height: 150)
@@ -69,6 +74,22 @@ struct PlantView: View {
                         .frame(width: 200, height: 200)
                 }
                 Spacer()
+            }
+        }.onAppear {
+            if dailyWaterList.count == 0 {
+                let today = DailyWater(context: context)
+                today.id = UUID()
+                today.date = Date()
+                today.intake = 0
+                today.goal = 1000
+
+                do {
+                    try context.save()
+                } catch {
+                    print(error)
+                }
+            } else {
+                progress = CGFloat(dailyWaterList.first!.intake / dailyWaterList.first!.goal)
             }
         }
     }

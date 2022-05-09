@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HorizontalWave: View {
     
-    @State var progress: CGFloat = 0.0
+    @Binding var progress: CGFloat
     @Binding var startAnimation: CGFloat
     @State var isAnimating = false
     
@@ -42,7 +42,7 @@ struct HorizontalWave: View {
 
 struct HorizontalWave_Previews: PreviewProvider {
     static var previews: some View {
-        HorizontalWave(startAnimation: .constant(0))
+        HorizontalWave(progress: .constant(0), startAnimation: .constant(0))
             .previewLayout(.sizeThatFits)
     }
 }
