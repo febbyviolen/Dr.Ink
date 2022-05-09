@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct ChallengeModal: View {
-    
+struct MainModal: View {
     @Binding var isShowing: Bool
     
     var body: some View {
@@ -37,6 +36,6 @@ struct ChallengeModal: View {
 
 struct ChallengeModal_Previews: PreviewProvider {
     static var previews: some View {
-        ChallengeModal(isShowing: .constant(true))
+        MainModal(isShowing: .constant(true))
     }
 }

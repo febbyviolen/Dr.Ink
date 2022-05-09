@@ -12,7 +12,7 @@ struct MainTabBar: View {
     
     @State var selectedIndex = 0
     @State var shouldShowWaterFullScreen = false
-    @State var shouldShowChallengeModal = false
+    @State var shouldShowMainModal = false
     
     var body: some View {
         ZStack {
@@ -26,11 +26,11 @@ struct MainTabBar: View {
                     case 0:
                         Plant()
                     case 1:
-                        Challenge(showModal: $shouldShowChallengeModal)
+                        Challenge(showModal: $shouldShowMainModal)
                     case 3:
-                        Challenge(showModal: $shouldShowChallengeModal)
+                        Challenge(showModal: $shouldShowMainModal)
                     case 4:
-                        Challenge(showModal: $shouldShowChallengeModal)
+                        Challenge(showModal: $shouldShowMainModal)
                     default:
                         Text("Error")
                     }
@@ -74,7 +74,7 @@ struct MainTabBar: View {
                 }.frame(width: UIScreen.main.bounds.width)
             }
             
-            ChallengeModal(isShowing: $shouldShowChallengeModal)
+            MainModal(isShowing: $shouldShowMainModal)
         }
     }
 }
