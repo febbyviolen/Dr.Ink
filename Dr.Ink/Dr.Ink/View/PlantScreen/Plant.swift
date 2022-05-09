@@ -11,7 +11,7 @@ struct Plant: View {
     
     @EnvironmentObject var liquid: ViewModel
     
-    @State var progress : CGFloat = 1.0
+    @State var progress : CGFloat = 0
     @State var startAnimation : CGFloat = 0.0
     @State var goal : Int = 2000
     
@@ -57,7 +57,8 @@ struct Plant: View {
                     Image(getImageName())
                         .resizable()
                         .scaledToFit()
-                }.frame(width: 199, height: 396)
+                        .frame(width: 200, height: 200)
+                }
                 Spacer()
             }
         }
@@ -66,8 +67,7 @@ struct Plant: View {
 
 struct Main__Previews: PreviewProvider {
     static var previews: some View {
-        Plant()
-            .environmentObject(ViewModel())
+        Plant().environmentObject(ViewModel())
     }
 }
     

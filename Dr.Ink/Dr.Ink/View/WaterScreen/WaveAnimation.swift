@@ -47,14 +47,6 @@ struct WaveAnimation: View {
     }
 }
 
-//struct WaveAnimation_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//        WaveAnimation(progress: .constant(0.3), startAnimation: .constant(0))
-//            .previewLayout(.sizeThatFits)
-//    }
-//}
-
 struct WaterWave: Shape {
     var progress: CGFloat
     var waveHeight: CGFloat

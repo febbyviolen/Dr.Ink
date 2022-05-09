@@ -11,13 +11,13 @@ struct Background: View { // 배경
     var body: some View {
         ZStack{
             Circle()
-                .offset(x: -25, y: -380)
-                .frame(width: 749, height: 755)
+                .offset(x: -30, y: -300)
+                .frame(width: UIScreen.main.bounds.width+200, height: UIScreen.main.bounds.width+200)
                 .foregroundColor(Color("LightBlue"))
                 
             Circle()
                 .offset(x: -30, y: -300)
-                .frame(width: 512, height: 470)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
                 .foregroundColor(Color("DarkBlue"))
             }
     }

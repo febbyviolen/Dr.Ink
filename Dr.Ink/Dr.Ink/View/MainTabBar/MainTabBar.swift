@@ -72,7 +72,7 @@ struct MainTabBar: View {
                             Spacer()
                         })
                     }
-                }.frame(width: UIScreen.main.bounds.width)
+                }.frame(width: UIScreen.main.bounds.width, height: 80, alignment: .bottom)
             }
             
             MainModal(isShowing: $shouldShowMainModal, content: $modalContent)

@@ -9,9 +9,7 @@ import SwiftUI
 
 struct Water: View {
     
-    @EnvironmentObject var liquid: ViewModel
     @Binding var shouldShowModal: Bool
-    
     let drinks: [Drink]
     
     @State var progress : CGFloat = 0.0
@@ -95,34 +93,27 @@ extension Water{
     var PlusMinButton : some View {
         VStack{
             Button(action: {
-                if(ml == 1000){
-                    return
-                } else {
+                if ml < 1000 {
                     progress = progress + 0.1
                     ml += 100
                 }
             },label:{
                 Image("PlusWaterBtn")
-                
             })
             
             Button(action: {
-                if(ml == 0){
-                    return
-                } else {
+                if ml > 0 {
                     progress = progress - 0.1
                     ml = ml - 100
                 }
             },label:{
                 Image("MinWaterBtn")
-                
             })
         }
     }
     
     var AnotherButton : some View {
         HStack(spacing: 20){
-        
             Text("\(ml)ml")
                 .fontWeight(.bold)
                 .foregroundColor(.white)
@@ -140,12 +131,7 @@ extension Water{
                     .background(Color("DarkGreen"))
                     .cornerRadius(24)
             })
-        
         }
-    }
-    
-    func getTotalLiquid() -> CGFloat{
-        return CGFloat((liquid.total()/100))
     }
     
     func getColor() -> Color{
@@ -153,19 +139,7 @@ extension Water{
     }
     
     func addButtonPressed() {
-        if(ml != 0){
-            liquid.addItem(drinkName: Drinkselected.label, amount: ml)
-            progress = 0
-            ml = 0
-            
-        } else {
-            
-        }
+        progress = 0
+        ml = 0
     }
-    
-    func getProgress() -> CGFloat {
-        return CGFloat((liquid.total()))
-    }
-    
-    
 }
