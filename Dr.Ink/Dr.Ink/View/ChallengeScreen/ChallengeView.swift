@@ -16,11 +16,11 @@ struct ChallengeView: View {
             Background()
             
             VStack{
+                Spacer()
                 Text("챌린지")
                     .fontWeight(.bold)
                     .foregroundColor(Color("DarkDarkBlue"))
                     .font(.title)
-                    .offset(y: -60)
                     
 
                 Button(action: {
@@ -71,7 +71,7 @@ struct ChallengeView: View {
                     .cornerRadius(30)
                     .padding(.bottom, 40)
                 })
-
+                Spacer()
             }            
         }
     }
