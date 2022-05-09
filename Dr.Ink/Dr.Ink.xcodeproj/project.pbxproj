@@ -10,8 +10,6 @@
 		8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301A828288CE40047B9C7 /* Dr_InkApp.swift */; };
 		8A3301AD28288CE50047B9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3301AC28288CE50047B9C7 /* Assets.xcassets */; };
 		8A3301B028288CE50047B9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3301AF28288CE50047B9C7 /* Preview Assets.xcassets */; };
-		8A3301B828288DD40047B9C7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301B728288DD40047B9C7 /* ViewModel.swift */; };
-		8A3301BC28288DDB0047B9C7 /* LiquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */; };
 		8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BB28288DDB0047B9C7 /* Drink.swift */; };
 		8A3301C028288E210047B9C7 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BF28288E210047B9C7 /* Background.swift */; };
 		8A3301C428288E420047B9C7 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C228288E420047B9C7 /* Challenge.swift */; };
@@ -33,8 +31,6 @@
 		8A3301A828288CE40047B9C7 /* Dr_InkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dr_InkApp.swift; sourceTree = "<group>"; };
 		8A3301AC28288CE50047B9C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A3301AF28288CE50047B9C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8A3301B728288DD40047B9C7 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidModel.swift; sourceTree = "<group>"; };
 		8A3301BB28288DDB0047B9C7 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		8A3301BF28288E210047B9C7 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		8A3301C228288E420047B9C7 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -82,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				8A3301B928288DDB0047B9C7 /* Model */,
-				8A3301B628288DD40047B9C7 /* ViewModel */,
 				8A3301BE28288DFE0047B9C7 /* View */,
 				8A3301A828288CE40047B9C7 /* Dr_InkApp.swift */,
 				8A3301AC28288CE50047B9C7 /* Assets.xcassets */,
@@ -99,18 +94,9 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8A3301B628288DD40047B9C7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				8A3301B728288DD40047B9C7 /* ViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		8A3301B928288DDB0047B9C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301BA28288DDB0047B9C7 /* LiquidModel.swift */,
 				8A3301BB28288DDB0047B9C7 /* Drink.swift */,
 				8A3301DA2828944C0047B9C7 /* ChallengeDetail.swift */,
 			);
@@ -256,12 +242,10 @@
 			files = (
 				8A3301CF28288E7E0047B9C7 /* HorizontalWave.swift in Sources */,
 				8A3301C428288E420047B9C7 /* Challenge.swift in Sources */,
-				8A3301BC28288DDB0047B9C7 /* LiquidModel.swift in Sources */,
 				8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */,
 				8A3301CE28288E7E0047B9C7 /* Plant.swift in Sources */,
 				8A3301CA28288E5F0047B9C7 /* Water.swift in Sources */,
 				8A3301DF28289AC30047B9C7 /* Setting.swift in Sources */,
-				8A3301B828288DD40047B9C7 /* ViewModel.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,

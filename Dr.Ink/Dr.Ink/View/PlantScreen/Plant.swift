@@ -9,8 +9,6 @@ import SwiftUI
 
 struct Plant: View {
     
-    @EnvironmentObject var liquid: ViewModel
-    
     @State var progress : CGFloat = 0
     @State var startAnimation : CGFloat = 0.0
     @State var goal : Int = 2000
@@ -67,16 +65,14 @@ struct Plant: View {
 
 struct Main__Previews: PreviewProvider {
     static var previews: some View {
-        Plant().environmentObject(ViewModel())
+        Plant()
     }
 }
     
 extension Plant{
     
     func getProgress(){
-        var prog = goal - liquid.total()
-        prog = goal - prog
-        progress = CGFloat(prog/10)
+        progress = 0
     }
     
     func getImageName()->String {
