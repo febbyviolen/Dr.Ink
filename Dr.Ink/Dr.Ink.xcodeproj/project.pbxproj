@@ -26,6 +26,7 @@
 		8A3301E228289AD70047B9C7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E128289AD70047B9C7 /* CalendarView.swift */; };
 		8A3301E72828F5300047B9C7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E52828F5300047B9C7 /* DataModel.xcdatamodeld */; };
 		8A3301EA2828F7090047B9C7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E92828F7090047B9C7 /* CoreDataManager.swift */; };
+		8A58820B2831CCD5005747C4 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58820A2831CCD5005747C4 /* UserSetting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		8A3301E128289AD70047B9C7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8A3301E62828F5300047B9C7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		8A3301E92828F7090047B9C7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8A58820A2831CCD5005747C4 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				8A3301BB28288DDB0047B9C7 /* Drink.swift */,
 				8A3301DA2828944C0047B9C7 /* Challenge.swift */,
+				8A58820A2831CCD5005747C4 /* UserSetting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				8A3301CA28288E5F0047B9C7 /* WaterView.swift in Sources */,
 				8A3301DF28289AC30047B9C7 /* SettingView.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
+				8A58820B2831CCD5005747C4 /* UserSetting.swift in Sources */,
 				8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
 				8A3301C028288E210047B9C7 /* BackgroundView.swift in Sources */,
