@@ -27,15 +27,15 @@ struct MainModal: View {
                     case .challengeSugarFree:
                         ChallengeContent(detail: .sugarFree)
                     case .alarmSetting:
-                        AlarmSettingView()
+                        AlarmSettingView(shouldShowModal: $isShowing)
                     case .genderSetting:
-                        GenderSettingView()
+                        GenderSettingView(shouldShowModal: $isShowing)
                     case .weightSetting:
-                        WeatherSettingView()
+                        WeatherSettingView(shouldShowModal: $isShowing)
                     case .activitySetting:
-                        ActivitySettingView()
+                        ActivitySettingView(shouldShowModal: $isShowing)
                     case .weatherSetting:
-                        WeatherSettingView()
+                        WeatherSettingView(shouldShowModal: $isShowing)
                     default:
                         Text("Error")
                     }

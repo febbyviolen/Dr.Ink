@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WeightSettingView: View {
+    @Binding var shouldShowModal: Bool
+    
     var body: some View {
         Text("WeightSettingView")
     }
@@ -15,6 +17,6 @@ struct WeightSettingView: View {
 
 struct WeightSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        WeightSettingView()
+        WeightSettingView(shouldShowModal: .constant(false))
     }
 }

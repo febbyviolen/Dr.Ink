@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WeatherSettingView: View {
+    @Binding var shouldShowModal: Bool
+    
     var body: some View {
         Text("WeatherSettingView")
     }
@@ -15,6 +17,6 @@ struct WeatherSettingView: View {
 
 struct WeatherSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherSettingView()
+        WeatherSettingView(shouldShowModal: .constant(false))
     }
 }

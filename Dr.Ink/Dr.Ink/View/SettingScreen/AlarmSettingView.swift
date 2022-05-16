@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AlarmSettingView: View {
+    @Binding var shouldShowModal: Bool
+    
     var body: some View {
         Text("AlarmSettingView")
     }
@@ -15,6 +17,6 @@ struct AlarmSettingView: View {
 
 struct AlarmSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        AlarmSettingView()
+        AlarmSettingView(shouldShowModal: .constant(false))
     }
 }

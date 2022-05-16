@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ActivitySettingView: View {
+    @Binding var shouldShowModal: Bool
+    
     var body: some View {
         Text("ActivitySettingView")
     }
@@ -15,6 +17,6 @@ struct ActivitySettingView: View {
 
 struct ActivitySettingView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivitySettingView()
+        ActivitySettingView(shouldShowModal: .constant(false))
     }
 }
