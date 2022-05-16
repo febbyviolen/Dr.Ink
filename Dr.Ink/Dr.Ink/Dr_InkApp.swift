@@ -16,23 +16,10 @@ struct Dr_InkApp: App {
             MainTabBar()
                 .environment(\.managedObjectContext, manager.mainContext)
                 .onAppear {
-                    guard let data = UserDefaults.standard.data(forKey: UserSetting.key) else { return }
-                    let decoder = JSONDecoder()
-                    do {
-                        let userSettring = try decoder.decode(UserSetting.self, from: data)
-                        UserSetting.shared = userSettring
-                    } catch {
-                        print(error)
-                    }
+                    UserSetting.fetchFromUserDefaults()
                 }
                 .onDisappear {
-                    let encoder = JSONEncoder()
-                    do {
-                        let data = try encoder.encode(UserSetting.shared)
-                        UserDefaults.standard.set(data, forKey: UserSetting.key)
-                    } catch {
-                        print(error)
-                    }
+                    UserSetting.storeInUserDefaults()
                 }
         }
     }
