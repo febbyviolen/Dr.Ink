@@ -16,6 +16,9 @@ struct GenderSettingView: View {
                 .opacity(0.3)
             VStack {
                 Button(action: {
+                    UserSetting.shared.gender = .man
+                    UserSetting.storeInUserDefaults()
+                    shouldShowModal = false
                 }, label: {
                     Text("남성")
                     .font(.system(size: 22))
@@ -28,6 +31,9 @@ struct GenderSettingView: View {
                 .cornerRadius(10)
                 
                 Button(action: {
+                    UserSetting.shared.gender = .woman
+                    UserSetting.storeInUserDefaults()
+                    shouldShowModal = false
                 }, label: {
                     Text("여성")
                     .font(.system(size: 22))
