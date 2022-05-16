@@ -11,7 +11,7 @@
 		8A3301AD28288CE50047B9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3301AC28288CE50047B9C7 /* Assets.xcassets */; };
 		8A3301B028288CE50047B9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3301AF28288CE50047B9C7 /* Preview Assets.xcassets */; };
 		8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BB28288DDB0047B9C7 /* Drink.swift */; };
-		8A3301C028288E210047B9C7 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BF28288E210047B9C7 /* Background.swift */; };
+		8A3301C028288E210047B9C7 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301BF28288E210047B9C7 /* BackgroundView.swift */; };
 		8A3301C428288E420047B9C7 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C228288E420047B9C7 /* ChallengeView.swift */; };
 		8A3301C528288E420047B9C7 /* MainModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C328288E420047B9C7 /* MainModal.swift */; };
 		8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */; };
@@ -34,7 +34,7 @@
 		8A3301AC28288CE50047B9C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A3301AF28288CE50047B9C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A3301BB28288DDB0047B9C7 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
-		8A3301BF28288E210047B9C7 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		8A3301BF28288E210047B9C7 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		8A3301C228288E420047B9C7 /* ChallengeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		8A3301C328288E420047B9C7 /* MainModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModal.swift; sourceTree = "<group>"; };
 		8A3301C728288E5F0047B9C7 /* WaveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveAnimation.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		8A3301BE28288DFE0047B9C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A3301BF28288E210047B9C7 /* Background.swift */,
+				8A3301BF28288E210047B9C7 /* BackgroundView.swift */,
 				8A3301D028288E940047B9C7 /* MainTabBar */,
 				8A3301CB28288E7E0047B9C7 /* PlantScreen */,
 				8A3301DC28289A730047B9C7 /* CalendarScreen */,
@@ -265,7 +265,7 @@
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
-				8A3301C028288E210047B9C7 /* Background.swift in Sources */,
+				8A3301C028288E210047B9C7 /* BackgroundView.swift in Sources */,
 				8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */,
 				8A3301C528288E420047B9C7 /* MainModal.swift in Sources */,
 				8A3301E228289AD70047B9C7 /* CalendarView.swift in Sources */,

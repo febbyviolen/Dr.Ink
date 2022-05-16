@@ -12,26 +12,24 @@ struct CalendarView: View {
     var dailyWaterList: FetchedResults<DailyWater>
     
     var body: some View {
-        ZStack {
-            Background()
-            
-            VStack {
-                Spacer()
-                Divider()
-                ScrollView {
-                    LazyVStack {
-                        ForEach(dailyWaterList) { dailyWater in
-                            Text("\(dailyWater.date!)")
-                            Text("\(Int(dailyWater.intake)) / \(Int(dailyWater.goal))")
-                            Divider()
-                        }
-                    }                    
+        VStack {
+            Spacer()
+            Divider()
+            ScrollView {
+                LazyVStack {
+                    ForEach(dailyWaterList) { dailyWater in
+                        Text("\(dailyWater.date!)")
+                        Text("\(Int(dailyWater.intake)) / \(Int(dailyWater.goal))")
+                        Divider()
+                    }
                 }
-                Divider()
-                Spacer()
             }
-            .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: .infinity, alignment: .top)
-            
+            Divider()
+            Spacer()
+        }
+        .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: .infinity, alignment: .top)
+        .background {
+            BackgroundView()
         }
     }
 }

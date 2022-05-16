@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-struct Background: View { // 배경
+struct BackgroundView: View {
     var body: some View {
-        ZStack{
+        ZStack {
             Circle()
-                .offset(x: -30, y: -300)
-                .frame(width: UIScreen.main.bounds.width+200, height: UIScreen.main.bounds.width+200)
+                .offset(x: -25, y: -380)
+                .frame(width: UIScreen.main.bounds.width+600, height: UIScreen.main.bounds.width+375)
                 .foregroundColor(Color("LightBlue"))
-                
+            
             Circle()
                 .offset(x: -30, y: -300)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
+                .frame(width: UIScreen.main.bounds.width+130, height: UIScreen.main.bounds.width+474)
                 .foregroundColor(Color("DarkBlue"))
-            }
+        }
     }
 }
 
 struct Background_Previews: PreviewProvider {
     static var previews: some View {
-        Background()
+        BackgroundView()
             .previewInterfaceOrientation(.portrait)
     }
 }
