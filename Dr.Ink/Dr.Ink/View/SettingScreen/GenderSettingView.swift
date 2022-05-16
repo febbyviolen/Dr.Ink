@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GenderSettingView: View {
     @Binding var shouldShowModal: Bool
+    @EnvironmentObject var userSetting: UserSetting
     
     var body: some View {
         ZStack {
@@ -16,7 +17,7 @@ struct GenderSettingView: View {
                 .opacity(0.3)
             VStack {
                 Button(action: {
-                    UserSetting.shared.gender = .man
+                    userSetting.gender = .man
                     UserSetting.storeInUserDefaults()
                     shouldShowModal = false
                 }, label: {
@@ -31,7 +32,7 @@ struct GenderSettingView: View {
                 .cornerRadius(10)
                 
                 Button(action: {
-                    UserSetting.shared.gender = .woman
+                    userSetting.gender = .woman
                     UserSetting.storeInUserDefaults()
                     shouldShowModal = false
                 }, label: {
