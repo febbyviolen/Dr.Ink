@@ -31,7 +31,7 @@ struct MainTabBar: View {
                     case 3:
                         ChallengeView(showModal: $shouldShowMainModal, modalContent: $modalContent)
                     case 4:
-                        SettingView()
+                        SettingView(showModal: $shouldShowMainModal, modalContent: $modalContent)
                     default:
                         Text("Error")
                     }

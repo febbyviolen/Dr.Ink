@@ -26,6 +26,16 @@ struct MainModal: View {
                         ChallengeContent(detail: .rowCaffeine)
                     case .challengeSugarFree:
                         ChallengeContent(detail: .sugarFree)
+                    case .alarmSetting:
+                        AlarmSettingView()
+                    case .genderSetting:
+                        GenderSettingView()
+                    case .weightSetting:
+                        WeatherSettingView()
+                    case .activitySetting:
+                        ActivitySettingView()
+                    case .weatherSetting:
+                        WeatherSettingView()
                     default:
                         Text("Error")
                     }

@@ -27,6 +27,11 @@
 		8A3301E72828F5300047B9C7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E52828F5300047B9C7 /* DataModel.xcdatamodeld */; };
 		8A3301EA2828F7090047B9C7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3301E92828F7090047B9C7 /* CoreDataManager.swift */; };
 		8A58820B2831CCD5005747C4 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58820A2831CCD5005747C4 /* UserSetting.swift */; };
+		8A58820D2831D7ED005747C4 /* AlarmSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58820C2831D7ED005747C4 /* AlarmSettingView.swift */; };
+		8A58820F2831D7FC005747C4 /* GenderSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58820E2831D7FC005747C4 /* GenderSettingView.swift */; };
+		8A5882112831D80B005747C4 /* ActivitySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5882102831D80B005747C4 /* ActivitySettingView.swift */; };
+		8A5882132831D818005747C4 /* WeatherSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5882122831D818005747C4 /* WeatherSettingView.swift */; };
+		8A5882152831D8BA005747C4 /* WeightSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5882142831D8BA005747C4 /* WeightSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +56,11 @@
 		8A3301E62828F5300047B9C7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		8A3301E92828F7090047B9C7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8A58820A2831CCD5005747C4 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
+		8A58820C2831D7ED005747C4 /* AlarmSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingView.swift; sourceTree = "<group>"; };
+		8A58820E2831D7FC005747C4 /* GenderSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSettingView.swift; sourceTree = "<group>"; };
+		8A5882102831D80B005747C4 /* ActivitySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySettingView.swift; sourceTree = "<group>"; };
+		8A5882122831D818005747C4 /* WeatherSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSettingView.swift; sourceTree = "<group>"; };
+		8A5882142831D8BA005747C4 /* WeightSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				8A3301DE28289AC30047B9C7 /* SettingView.swift */,
+				8A58820C2831D7ED005747C4 /* AlarmSettingView.swift */,
+				8A58820E2831D7FC005747C4 /* GenderSettingView.swift */,
+				8A5882142831D8BA005747C4 /* WeightSettingView.swift */,
+				8A5882102831D80B005747C4 /* ActivitySettingView.swift */,
+				8A5882122831D818005747C4 /* WeatherSettingView.swift */,
 			);
 			path = SettingScreen;
 			sourceTree = "<group>";
@@ -259,15 +274,20 @@
 			files = (
 				8A3301CF28288E7E0047B9C7 /* HorizontalWave.swift in Sources */,
 				8A3301C428288E420047B9C7 /* ChallengeView.swift in Sources */,
+				8A5882112831D80B005747C4 /* ActivitySettingView.swift in Sources */,
 				8A3301D9282891FD0047B9C7 /* ModalContent.swift in Sources */,
 				8A3301CE28288E7E0047B9C7 /* PlantView.swift in Sources */,
 				8A3301EA2828F7090047B9C7 /* CoreDataManager.swift in Sources */,
+				8A58820D2831D7ED005747C4 /* AlarmSettingView.swift in Sources */,
 				8A3301E72828F5300047B9C7 /* DataModel.xcdatamodeld in Sources */,
 				8A3301CA28288E5F0047B9C7 /* WaterView.swift in Sources */,
+				8A5882152831D8BA005747C4 /* WeightSettingView.swift in Sources */,
 				8A3301DF28289AC30047B9C7 /* SettingView.swift in Sources */,
 				8A3301BD28288DDB0047B9C7 /* Drink.swift in Sources */,
 				8A58820B2831CCD5005747C4 /* UserSetting.swift in Sources */,
 				8A3301D7282891BC0047B9C7 /* ChallengeContent.swift in Sources */,
+				8A58820F2831D7FC005747C4 /* GenderSettingView.swift in Sources */,
+				8A5882132831D818005747C4 /* WeatherSettingView.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
 				8A3301C028288E210047B9C7 /* BackgroundView.swift in Sources */,
 				8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */,

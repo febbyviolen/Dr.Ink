@@ -21,7 +21,6 @@ struct Dr_InkApp: App {
                     do {
                         let userSettring = try decoder.decode(UserSetting.self, from: data)
                         UserSetting.shared = userSettring
-                        print(UserSetting.shared)
                     } catch {
                         print(error)
                     }

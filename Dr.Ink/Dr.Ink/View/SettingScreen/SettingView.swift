@@ -8,20 +8,54 @@
 import SwiftUI
 
 struct SettingView: View {
+    @Binding var showModal: Bool
+    @Binding var modalContent: ModalContent?
     
     @Environment(\.managedObjectContext) var context
+    
+    let settingList: [(modalContent: ModalContent, name: String)] = [
+        (modalContent: ModalContent.alarmSetting, name: "알림"),
+        (modalContent: ModalContent.genderSetting, name: "성별"),
+        (modalContent: ModalContent.weightSetting, name: "체중"),
+        (modalContent: ModalContent.activitySetting, name: "활동량"),
+        (modalContent: ModalContent.weatherSetting, name: "날씨")
+    ]
     
     var body: some View {
         VStack {
             Spacer()
-            Text("설정")
+            LazyVStack {
+                ForEach(0..<5) { idx in
+                    Button(action: {
+                        modalContent = settingList[idx].modalContent
+                        showModal = true
+                    }, label: {
+                        HStack(alignment: .center, spacing: 5) {
+                            Text(settingList[idx].name)
+                                .font(.system(size: 30))
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                                .padding(.leading, 30.0)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .renderingMode(.template)
+                                .foregroundColor(.black)
+                                .padding(.trailing, 30.0)
+                        }
+                        .cornerRadius(30)
+                        .padding(.bottom, 40)
+                    })
+                }
+            }
             Spacer()
+        }.background {
+            BackgroundView()
         }
     }
 }
 
 struct Setting_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView()
+        SettingView(showModal: .constant(false), modalContent: .constant(.none))
     }
 }

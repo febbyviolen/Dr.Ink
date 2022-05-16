@@ -10,4 +10,9 @@ import Foundation
 enum ModalContent {
     case challengeLowCaffeine
     case challengeSugarFree
+    case alarmSetting
+    case genderSetting
+    case weightSetting
+    case activitySetting
+    case weatherSetting
 }
