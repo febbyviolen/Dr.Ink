@@ -11,13 +11,14 @@ struct SettingView: View {
     @Binding var showModal: Bool
     @Binding var modalContent: ModalContent?
     @Environment(\.managedObjectContext) var context
+    @EnvironmentObject var userSetting: UserSetting
     
-    let settingList: [(modalContent: ModalContent, name: String, content: String)] = [
-        (modalContent: ModalContent.alarmSetting, name: "알림", content: ""),
-        (modalContent: ModalContent.genderSetting, name: "성별", content: "\(UserSetting.shared.gender)"),
-        (modalContent: ModalContent.weightSetting, name: "체중", content: "\(UserSetting.shared.weight)kg"),
-        (modalContent: ModalContent.activitySetting, name: "활동량", content: "\(UserSetting.shared.activity)"),
-        (modalContent: ModalContent.weatherSetting, name: "날씨", content: "\(UserSetting.shared.weather)")
+    let settingList: [(modalContent: ModalContent, name: String)] = [
+        (modalContent: ModalContent.alarmSetting, name: "알림"),
+        (modalContent: ModalContent.genderSetting, name: "성별"),
+        (modalContent: ModalContent.weightSetting, name: "체중"),
+        (modalContent: ModalContent.activitySetting, name: "활동량"),
+        (modalContent: ModalContent.weatherSetting, name: "날씨")
     ]
     
     var body: some View {
@@ -36,11 +37,31 @@ struct SettingView: View {
                                 .foregroundColor(.black)
                                 .padding(.leading, 30.0)
                             Spacer()
-                            Text(settingList[idx].content)
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                                .padding(.trailing, 10.0)
+                            if idx == 1 {
+                                Text("\(userSetting.gender.rawValue)")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .padding(.trailing, 10.0)
+                            } else if idx == 2 {
+                                Text("\(userSetting.weight)kg")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .padding(.trailing, 10.0)
+                            } else if idx == 3 {
+                                Text("\(userSetting.activity.rawValue)")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .padding(.trailing, 10.0)
+                            } else if idx == 4 {
+                                Text("\(userSetting.weather.rawValue)")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .padding(.trailing, 10.0)
+                            }
                             Image(systemName: "chevron.right")
                                 .renderingMode(.template)
                                 .foregroundColor(.black)

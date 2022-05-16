@@ -15,6 +15,7 @@ struct Dr_InkApp: App {
         WindowGroup {
             MainTabBar()
                 .environment(\.managedObjectContext, manager.mainContext)
+                .environmentObject(UserSetting.shared)
                 .onAppear {
                     UserSetting.fetchFromUserDefaults()
                 }
