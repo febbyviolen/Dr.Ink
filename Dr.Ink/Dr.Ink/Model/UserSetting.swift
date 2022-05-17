@@ -50,6 +50,26 @@ final class UserSetting: ObservableObject, Codable {
     @Published var activity: Activity
     @Published var weather: Weather
     
+    var needWater: Int {
+        var water = weight * 30
+        
+        if activity == .low {
+            water -= 300
+        } else if activity == .high {
+            water += 300
+        }
+        
+        if weather == .hot {
+            water += 500
+        } else if weather == .warm {
+            water += 300
+        } else if weather == .cold {
+            water -= 200
+        }
+        
+        return water
+    }
+    
     enum CodingKeys: CodingKey {
         case alarm
         case gender

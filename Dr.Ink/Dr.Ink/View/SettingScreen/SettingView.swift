@@ -72,6 +72,11 @@ struct SettingView: View {
                     })
                 }
             }
+            Text("권장수분량\n\(userSetting.needWater)ml")
+                .font(.system(size: 30))
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+                .multilineTextAlignment(.center)
             Spacer()
         }.background {
             BackgroundView()
@@ -82,5 +87,7 @@ struct SettingView: View {
 struct Setting_Previews: PreviewProvider {
     static var previews: some View {
         SettingView(showModal: .constant(false), modalContent: .constant(.none))
+            .environmentObject(UserSetting.shared)
+            .previewInterfaceOrientation(.portrait)
     }
 }

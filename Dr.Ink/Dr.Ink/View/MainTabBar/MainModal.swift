@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct MainModal: View {
+    @FetchRequest(
+            entity: DailyWater.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \DailyWater.date, ascending: true)],
+            predicate: NSPredicate(format: "date >= %@ && date <= %@", Calendar.current.startOfDay(for: Date()) as CVarArg, Calendar.current.startOfDay(for: Date() + 86400 ) as CVarArg),
+            animation: .default)
+    var dailyWaterList: FetchedResults<DailyWater>
+    
+    @Environment(\.managedObjectContext) var context
+    
     @Binding var isShowing: Bool
     @Binding var content: ModalContent?
     
@@ -44,6 +53,14 @@ struct MainModal: View {
                 .frame(maxWidth: .infinity)
                 .background(Color.white)
                 .transition(.move(edge: .bottom))
+                .onDisappear {
+                    dailyWaterList.first!.setValue(UserSetting.shared.needWater, forKey: "goal")
+                    do {
+                        try context.save()
+                    } catch {
+                        print(error)
+                    }
+                }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
