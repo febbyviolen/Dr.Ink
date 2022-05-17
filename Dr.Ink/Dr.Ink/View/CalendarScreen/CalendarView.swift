@@ -10,6 +10,8 @@ import SwiftUI
 struct CalendarView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\DailyWater.date, order: .forward)])
     var dailyWaterList: FetchedResults<DailyWater>
+    @Binding var showModal: Bool
+    @Binding var modalContent: ModalContent?
     
     var body: some View {
         VStack {
@@ -23,7 +25,8 @@ struct CalendarView: View {
                 LazyVStack {
                     ForEach(dailyWaterList) { dailyWater in
                         Button(action: {
-                            
+                            modalContent = .dailyMemo
+                            showModal = true
                         }, label: {
                             VStack {
                                 Text("\(dailyWater.date!.dateToString())")
@@ -53,6 +56,6 @@ struct CalendarView: View {
 
 struct Calendar_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        CalendarView(showModal: .constant(false), modalContent: .constant(nil))
     }
 }

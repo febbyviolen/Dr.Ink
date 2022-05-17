@@ -45,6 +45,8 @@ struct MainModal: View {
                         ActivitySettingView(shouldShowModal: $isShowing)
                     case .weatherSetting:
                         WeatherSettingView(shouldShowModal: $isShowing)
+                    case .dailyMemo:
+                        DailyMemoView()
                     default:
                         Text("Error")
                     }

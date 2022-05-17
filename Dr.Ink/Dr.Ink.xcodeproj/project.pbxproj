@@ -33,6 +33,7 @@
 		8A5882132831D818005747C4 /* WeatherSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5882122831D818005747C4 /* WeatherSettingView.swift */; };
 		8A5882152831D8BA005747C4 /* WeightSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5882142831D8BA005747C4 /* WeightSettingView.swift */; };
 		8A58821828336430005747C4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58821728336430005747C4 /* Date.swift */; };
+		8A58821A28338B20005747C4 /* DailyMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58821928338B20005747C4 /* DailyMemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		8A5882122831D818005747C4 /* WeatherSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSettingView.swift; sourceTree = "<group>"; };
 		8A5882142831D8BA005747C4 /* WeightSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSettingView.swift; sourceTree = "<group>"; };
 		8A58821728336430005747C4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8A58821928338B20005747C4 /* DailyMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				8A3301E128289AD70047B9C7 /* CalendarView.swift */,
+				8A58821928338B20005747C4 /* DailyMemoView.swift */,
 			);
 			path = CalendarScreen;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				8A58820F2831D7FC005747C4 /* GenderSettingView.swift in Sources */,
 				8A5882132831D818005747C4 /* WeatherSettingView.swift in Sources */,
 				8A3301A928288CE40047B9C7 /* Dr_InkApp.swift in Sources */,
+				8A58821A28338B20005747C4 /* DailyMemoView.swift in Sources */,
 				8A3301C028288E210047B9C7 /* BackgroundView.swift in Sources */,
 				8A3301C928288E5F0047B9C7 /* WaveAnimation.swift in Sources */,
 				8A58821828336430005747C4 /* Date.swift in Sources */,

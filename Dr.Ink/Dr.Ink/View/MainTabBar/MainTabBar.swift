@@ -27,7 +27,7 @@ struct MainTabBar: View {
                     case 0:
                         PlantView()
                     case 1:
-                        CalendarView()
+                        CalendarView(showModal: $shouldShowMainModal, modalContent: $modalContent)
                     case 3:
                         ChallengeView(showModal: $shouldShowMainModal, modalContent: $modalContent)
                     case 4:
