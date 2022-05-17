@@ -24,11 +24,11 @@ struct ActivitySettingView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .background(Color("Blue"))
+                    .cornerRadius(10)
                 })
-                .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .background(Color("Blue"))
-                .cornerRadius(10)
                 
                 Button(action: {
                     userSetting.activity = .middle
@@ -38,11 +38,11 @@ struct ActivitySettingView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .background(Color("Blue"))
+                    .cornerRadius(10)
                 })
-                .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .background(Color("Blue"))
-                .cornerRadius(10)
                 
                 Button(action: {
                     userSetting.activity = .high
@@ -52,11 +52,11 @@ struct ActivitySettingView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .background(Color("Blue"))
+                    .cornerRadius(10)
                 })
-                .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .background(Color("Blue"))
-                .cornerRadius(10)
             }
         }
     }
@@ -65,5 +65,6 @@ struct ActivitySettingView: View {
 struct ActivitySettingView_Previews: PreviewProvider {
     static var previews: some View {
         ActivitySettingView(shouldShowModal: .constant(false))
+            .environmentObject(UserSetting.shared)
     }
 }

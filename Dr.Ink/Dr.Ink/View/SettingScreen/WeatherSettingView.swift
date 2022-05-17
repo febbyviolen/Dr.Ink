@@ -24,11 +24,11 @@ struct WeatherSettingView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .background(Color("Blue"))
+                    .cornerRadius(10)
                 })
-                .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .background(Color("Blue"))
-                .cornerRadius(10)
                 
                 Button(action: {
                     userSetting.weather = .warm
@@ -38,12 +38,12 @@ struct WeatherSettingView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .background(Color("Blue"))
+                    .cornerRadius(10)
                 })
-                .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .background(Color("Blue"))
                 
-                .cornerRadius(10)
                 Button(action: {
                     userSetting.weather = .cool
                     shouldShowModal = false
@@ -52,11 +52,11 @@ struct WeatherSettingView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .background(Color("Blue"))
+                    .cornerRadius(10)
                 })
-                .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .background(Color("Blue"))
-                .cornerRadius(10)
                 
                 Button(action: {
                     userSetting.weather = .cold
@@ -66,11 +66,11 @@ struct WeatherSettingView: View {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .background(Color("Blue"))
+                    .cornerRadius(10)
                 })
-                .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .background(Color("Blue"))
-                .cornerRadius(10)                
             }
         }
     }
@@ -79,5 +79,6 @@ struct WeatherSettingView: View {
 struct WeatherSettingView_Previews: PreviewProvider {
     static var previews: some View {
         WeatherSettingView(shouldShowModal: .constant(false))
+            .environmentObject(UserSetting.shared)
     }
 }
