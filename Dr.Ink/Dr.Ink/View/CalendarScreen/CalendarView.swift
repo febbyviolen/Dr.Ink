@@ -14,17 +14,34 @@ struct CalendarView: View {
     var body: some View {
         VStack {
             Spacer()
-            Divider()
+            Text("기록")
+                .fontWeight(.bold)
+                .foregroundColor(Color("DarkDarkBlue"))
+                .font(.title)
+                .padding([.top, .bottom], 20)
             ScrollView {
                 LazyVStack {
                     ForEach(dailyWaterList) { dailyWater in
-                        Text("\(dailyWater.date!)")
-                        Text("\(Int(dailyWater.intake)) / \(Int(dailyWater.goal))")
-                        Divider()
+                        Button(action: {
+                            
+                        }, label: {
+                            VStack {
+                                Text("\(dailyWater.date!.dateToString())")
+                                    .font(.system(size: 22))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                Text("\(Int(dailyWater.intake)) / \(Int(dailyWater.goal))")
+                                    .font(.system(size: 15))
+                                    .foregroundColor(.black)
+                            }
+                            .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                            .frame(width: UIScreen.main.bounds.width * 0.7)
+                            .background(Color("Blue"))
+                            .cornerRadius(10)
+                        })
                     }
                 }
             }
-            Divider()
             Spacer()
         }
         .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: .infinity, alignment: .top)
