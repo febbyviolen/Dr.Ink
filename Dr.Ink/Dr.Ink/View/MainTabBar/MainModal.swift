@@ -31,7 +31,7 @@ struct MainModal: View {
                     case .genderSetting:
                         GenderSettingView(shouldShowModal: $isShowing)
                     case .weightSetting:
-                        WeatherSettingView(shouldShowModal: $isShowing)
+                        WeightSettingView(shouldShowModal: $isShowing)
                     case .activitySetting:
                         ActivitySettingView(shouldShowModal: $isShowing)
                     case .weatherSetting:

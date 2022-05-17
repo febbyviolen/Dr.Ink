@@ -9,14 +9,28 @@ import SwiftUI
 
 struct WeightSettingView: View {
     @Binding var shouldShowModal: Bool
+    @EnvironmentObject var userSetting: UserSetting
     
     var body: some View {
-        Text("WeightSettingView")
+        ZStack {
+            Color("LightLightBlue")
+                .opacity(0.3)
+            VStack {
+                Picker("당신의 몸무게를 입력해주세요.", selection: $userSetting.weight) {
+                    ForEach(0..<200) {
+                        Text("\($0)")
+                    }
+                }
+                Text("현재상태 : \(userSetting.weight)kg")
+            }
+            .pickerStyle(WheelPickerStyle())
+        }
     }
 }
 
 struct WeightSettingView_Previews: PreviewProvider {
     static var previews: some View {
         WeightSettingView(shouldShowModal: .constant(false))
+            .environmentObject(UserSetting.shared)
     }
 }
