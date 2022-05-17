@@ -50,7 +50,7 @@ final class UserSetting: ObservableObject, Codable {
     @Published var activity: Activity
     @Published var weather: Weather
     
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: CodingKey {
         case alarm
         case gender
         case weight
@@ -84,19 +84,19 @@ struct Alarm: Codable {
 }
 
 enum Gender: String, Codable {
-    case man
-    case woman
+    case man = "남성"
+    case woman = "여성"
 }
 
 enum Activity: String, Codable {
-    case low
-    case middle
-    case high
+    case low = "낮음"
+    case middle = "중간"
+    case high = "높음"
 }
 
 enum Weather: String, Codable {
-    case hot
-    case warm
-    case cool
-    case cold
+    case hot = "더움"
+    case warm = "따뜻함"
+    case cool = "시원함"
+    case cold = "추움"
 }

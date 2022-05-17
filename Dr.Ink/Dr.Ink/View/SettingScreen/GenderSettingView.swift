@@ -18,7 +18,6 @@ struct GenderSettingView: View {
             VStack {
                 Button(action: {
                     userSetting.gender = .man
-                    UserSetting.storeInUserDefaults()
                     shouldShowModal = false
                 }, label: {
                     Text("남성")
@@ -33,7 +32,6 @@ struct GenderSettingView: View {
                 
                 Button(action: {
                     userSetting.gender = .woman
-                    UserSetting.storeInUserDefaults()
                     shouldShowModal = false
                 }, label: {
                     Text("여성")
