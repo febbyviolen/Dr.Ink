@@ -11,6 +11,14 @@ final class UserSetting: ObservableObject, Codable {
     static var shared = UserSetting(alarm: Alarm(repeatTime: 30, startTime: .now, endTime: .now), gender: .man, weight: 70, activity: .middle, weather: .warm)
     static let key = "UserSetting"
     
+    init(alarm: Alarm, gender: Gender, weight: Int, activity: Activity, weather: Weather) {
+        self.alarm = alarm
+        self.gender = gender
+        self.weight = weight
+        self.activity = activity
+        self.weather = weather
+    }
+    
     static func storeInUserDefaults() {
         let encoder = JSONEncoder()
         do {
@@ -21,20 +29,16 @@ final class UserSetting: ObservableObject, Codable {
         }
     }
     
-    init(alarm: Alarm, gender: Gender, weight: Int, activity: Activity, weather: Weather) {
-        self.alarm = alarm
-        self.gender = gender
-        self.weight = weight
-        self.activity = activity
-        self.weather = weather
-    }
-    
     static func fetchFromUserDefaults() {
         guard let data = UserDefaults.standard.data(forKey: UserSetting.key) else { return }
         let decoder = JSONDecoder()
         do {
             let userSettring = try decoder.decode(UserSetting.self, from: data)
-            UserSetting.shared = userSettring
+            UserSetting.shared.alarm = userSettring.alarm
+            UserSetting.shared.gender = userSettring.gender
+            UserSetting.shared.weight = userSettring.weight
+            UserSetting.shared.activity = userSettring.activity
+            UserSetting.shared.weather = userSettring.weather
         } catch {
             print(error)
         }
