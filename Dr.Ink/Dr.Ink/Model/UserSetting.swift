@@ -8,7 +8,7 @@
 import Foundation
 
 final class UserSetting: ObservableObject, Codable {
-    static var shared = UserSetting(alarm: Alarm(repeatTime: 30, startTime: .now, endTime: .now), gender: .man, weight: 70, activity: .middle, weather: .warm)
+    static var shared = UserSetting(alarm: Alarm(time: .now, onOff: false), gender: .man, weight: 70, activity: .middle, weather: .warm)
     static let key = "UserSetting"
     
     init(alarm: Alarm, gender: Gender, weight: Int, activity: Activity, weather: Weather) {
@@ -98,9 +98,8 @@ final class UserSetting: ObservableObject, Codable {
 }
 
 struct Alarm: Codable {
-    var repeatTime: Int
-    var startTime: Date
-    var endTime: Date
+    var time: Date
+    var onOff: Bool
 }
 
 enum Gender: String, Codable {
