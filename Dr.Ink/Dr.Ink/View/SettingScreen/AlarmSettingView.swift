@@ -32,6 +32,7 @@ struct AlarmSettingView: View {
                         NotificationManager.shared.removeAlarm()
                     }
                     userSetting.alarm = Alarm(time: time, onOff: onOff)
+                    UserSetting.storeInUserDefaults()
                     shouldShowModal = false
                 }, label: {
                     Text("저장")

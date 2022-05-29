@@ -26,7 +26,7 @@ final class NotificationManager {
     }
     
     func setAlarm(date: Date) {
-        let date = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+        let date = Calendar.current.dateComponents([.hour, .minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
