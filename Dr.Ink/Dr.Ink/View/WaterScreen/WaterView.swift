@@ -94,6 +94,7 @@ extension WaterView{
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 61, height: 69)
+                .opacity(drink == drinkselected ? 1 : 0.3)
             Text(drink.label)
                 .foregroundColor(drink.color)
                 .fontWeight(.semibold)
