@@ -137,9 +137,11 @@ extension WaterView{
                 if userSetting.challenges.contains(.rowCaffeine) && drinkselected.caffeine {
                     challengeMessage = "카페인이 포함된 음료를 드셨네요. 금일 챌린지는 실패했습니다."
                     showingAlert = true
+                    dailyWaterList.first!.setValue(false, forKey: "caffeineChallenge")
                 } else if userSetting.challenges.contains(.sugarFree) && drinkselected.sugar {
                     challengeMessage = "설탕이 포함된 음료를 드셨네요. 금일 챌린지는 실패했습니다."
                     showingAlert = true
+                    dailyWaterList.first!.setValue(false, forKey: "sugerChallenge")
                 } else {
                     addButtonPressed()
                     shouldShowModal = false

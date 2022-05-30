@@ -16,6 +16,7 @@ struct PlantView: View {
     var dailyWaterList: FetchedResults<DailyWater>
     
     @Environment(\.managedObjectContext) var context
+    @EnvironmentObject var userSetting: UserSetting
     
     @State var startAnimation: CGFloat = 0.0
     @State var goal: Int = 2000
@@ -51,8 +52,7 @@ struct PlantView: View {
                 }.frame(maxWidth: UIScreen.main.bounds.width)
             }
             
-            VStack{
-                Spacer()
+            ZStack {
                 Image({
                     if (dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal) < 0.4 {
                         return "Seed"
@@ -67,6 +67,14 @@ struct PlantView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: UIScreen.main.bounds.height*2/5, height: UIScreen.main.bounds.height*2/5)
+                VStack {
+                    if dailyWaterList.first!.caffeineChallenge {
+                        Text("카페인")
+                    }
+                    if dailyWaterList.first!.sugarChallenge {
+                        Text("무설탕")
+                    }
+                }
             }
             Spacer()
         }.background {
@@ -78,6 +86,8 @@ struct PlantView: View {
                 today.date = Date()
                 today.intake = 0
                 today.goal = 2000
+                today.caffeineChallenge = userSetting.challenges.contains(.rowCaffeine)
+                today.sugarChallenge = userSetting.challenges.contains(.sugarFree)
                 
                 do {
                     try context.save()

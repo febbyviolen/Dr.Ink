@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ChallengeContent: View {
+    @FetchRequest(
+        entity: DailyWater.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \DailyWater.date, ascending: true)],
+        predicate: NSPredicate(format: "date >= %@ && date <= %@", Calendar.current.startOfDay(for: Date()) as CVarArg, Calendar.current.startOfDay(for: Date() + 86400 ) as CVarArg),
+        animation: .default)
+    var dailyWaterList: FetchedResults<DailyWater>
+    
     let detail: Challenge
     @State private var showingAlert = false
     @EnvironmentObject var userSetting: UserSetting
@@ -55,6 +62,8 @@ struct ChallengeContent: View {
                                 userSetting.challenges.append(detail)
                             }
                             UserSetting.storeInUserDefaults()
+                            dailyWaterList.first!.caffeineChallenge = userSetting.challenges.contains(.rowCaffeine)
+                            dailyWaterList.first!.sugarChallenge = userSetting.challenges.contains(.sugarFree)
                         }
                     }
                 }
