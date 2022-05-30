@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Challenge: Hashable {
+enum Challenge: Hashable, Codable {
     case rowCaffeine, sugarFree
     
     var title: String {

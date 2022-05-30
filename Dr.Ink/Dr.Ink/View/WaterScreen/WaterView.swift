@@ -15,7 +15,10 @@ struct WaterView: View {
             animation: .default)
     var dailyWaterList: FetchedResults<DailyWater>
     
+    @State private var showingAlert = false
+    @State private var challengeMessage = ""
     @Environment(\.managedObjectContext) var context
+    @EnvironmentObject var userSetting: UserSetting
     
     @Binding var shouldShowModal: Bool
     let drinks: [Drink]
@@ -24,7 +27,7 @@ struct WaterView: View {
     @State var startAnimation : CGFloat = 0.0
     @State var ml : Int = 0
     @State var fillColor = Color("LightLightBlue")
-    @State var Drinkselected : Drink = .water
+    @State var drinkselected : Drink = .water
     
     var body: some View {
         VStack(spacing: 5) {
@@ -59,7 +62,7 @@ struct WaterView: View {
                         ChooseDrink(drink: drink)
                             .onTapGesture {
                                 DispatchQueue.main.async {
-                                    self.Drinkselected = drink
+                                    self.drinkselected = drink
                                     fillColor = getColor()
                                 }
                             }
@@ -130,8 +133,16 @@ extension WaterView{
                 .cornerRadius(24)
             
             Button(action: {
-                addButtonPressed()
-                shouldShowModal = false
+                if userSetting.challenges.contains(.rowCaffeine) && drinkselected.caffeine {
+                    challengeMessage = "카페인이 포함된 음료를 드셨네요. 금일 챌린지는 실패했습니다."
+                    showingAlert = true
+                } else if userSetting.challenges.contains(.sugarFree) && drinkselected.sugar {
+                    challengeMessage = "설탕이 포함된 음료를 드셨네요. 금일 챌린지는 실패했습니다."
+                    showingAlert = true
+                } else {
+                    addButtonPressed()
+                    shouldShowModal = false
+                }
             }, label: {
                 Text("+ 추가")
                     .fontWeight(.bold)
@@ -140,11 +151,17 @@ extension WaterView{
                     .background(Color("DarkGreen"))
                     .cornerRadius(24)
             })
+            .alert(challengeMessage, isPresented: $showingAlert) {
+                Button("OK", role: .cancel) {
+                    addButtonPressed()
+                    shouldShowModal = false
+                }
+            }
         }
     }
     
     func getColor() -> Color{
-        return Drinkselected.color
+        return drinkselected.color
     }
     
     func addButtonPressed() {

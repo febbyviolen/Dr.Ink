@@ -43,5 +43,27 @@ enum Drink: Hashable {
             return Color("CoffeeBrown")
         }
     }
+    
+    var caffeine: Bool {
+        switch self {
+        case .water:
+            return false
+        case .greenTea:
+            return true
+        case .coffee:
+            return true
+        }
+    }
+    
+    var sugar: Bool {
+        switch self {
+        case .water:
+            return false
+        case .greenTea:
+            return false
+        case .coffee:
+            return false
+        }
+    }
 }
 

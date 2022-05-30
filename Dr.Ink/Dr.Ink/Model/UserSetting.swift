@@ -17,6 +17,7 @@ final class UserSetting: ObservableObject, Codable {
         self.weight = weight
         self.activity = activity
         self.weather = weather
+        self.challenges = []
     }
     
     static func storeInUserDefaults() {
@@ -39,6 +40,7 @@ final class UserSetting: ObservableObject, Codable {
             UserSetting.shared.weight = userSettring.weight
             UserSetting.shared.activity = userSettring.activity
             UserSetting.shared.weather = userSettring.weather
+            UserSetting.shared.challenges = userSettring.challenges
         } catch {
             print(error)
         }
@@ -49,6 +51,7 @@ final class UserSetting: ObservableObject, Codable {
     @Published var weight: Int
     @Published var activity: Activity
     @Published var weather: Weather
+    @Published var challenges: [Challenge]
     
     var needWater: Int {
         var water = weight * 30
@@ -76,6 +79,7 @@ final class UserSetting: ObservableObject, Codable {
         case weight
         case activity
         case weather
+        case challenges
     }
     
     required init(from decoder: Decoder) throws {
@@ -85,6 +89,7 @@ final class UserSetting: ObservableObject, Codable {
         weight = try container.decode(Int.self, forKey: .weight)
         activity = try container.decode(Activity.self, forKey: .activity)
         weather = try container.decode(Weather.self, forKey: .weather)
+        challenges = try container.decode([Challenge].self, forKey: .challenges)
     }
     
     func encode(to encoder: Encoder) throws{
@@ -94,6 +99,7 @@ final class UserSetting: ObservableObject, Codable {
         try container.encode(weight, forKey: .weight)
         try container.encode(activity, forKey: .activity)
         try container.encode(weather, forKey: .weather)
+        try container.encode(challenges, forKey: .challenges)
     }
 }
 

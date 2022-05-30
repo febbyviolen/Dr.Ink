@@ -15,7 +15,7 @@ final class NotificationManager {
     
     private init() {
         let content = UNMutableNotificationContent()
-        content.title = "물 마실 시간!!"
+        content.title = "물 마실 시간"
         content.body = "물을 마셔서 건강을 회복해보세요!"
         self.content = content
         requestAuth()
