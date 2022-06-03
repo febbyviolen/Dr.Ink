@@ -18,54 +18,61 @@ struct CalendarView: View {
     @State var currentMonth: Int = 0
     
     var body: some View {
-        VStack(spacing: 35) {
-            let days: [String] = ["일","월","화","수","목","금","토"]
-            
-            HStack(spacing: 20) {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(extraDate()[0])
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                    Text(extraDate()[1])
-                        .font(.title.bold())
-                }
-                Spacer(minLength: 0)
-                Button {
-                    withAnimation {
-                        currentMonth -= 1
+        VStack {
+            Spacer()
+            VStack(alignment: .center, spacing: 35) {
+                let days: [String] = ["일","월","화","수","목","금","토"]
+                
+                HStack(spacing: 20) {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(extraDate()[0])
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                        Text(extraDate()[1])
+                            .font(.title.bold())
                     }
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.title2)
-                }
-                Button {
-                    withAnimation {
-                        currentMonth += 1
+                    Spacer(minLength: 0)
+                    Button {
+                        withAnimation {
+                            currentMonth -= 1
+                        }
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.title2)
                     }
-                } label: {
-                    Image(systemName: "chevron.right")
-                        .font(.title2)
+                    Button {
+                        withAnimation {
+                            currentMonth += 1
+                        }
+                    } label: {
+                        Image(systemName: "chevron.right")
+                            .font(.title2)
+                    }
+                }.padding(.horizontal)
+                
+                HStack(spacing: 0) {
+                    ForEach(days, id: \.self) { day in
+                        Text(day)
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                    }
                 }
-            }.padding(.horizontal)
-            
-            HStack(spacing: 0) {
-                ForEach(days, id: \.self) { day in
-                    Text(day)
-                        .font(.callout)
-                        .fontWeight(.semibold)
-                        .frame(maxWidth: .infinity)
+                
+                let colums = Array(repeating: GridItem(.flexible()), count: 7)
+                LazyVGrid(columns: colums, spacing: 15) {
+                    ForEach(extractDate()) { value in
+                        CardView(value: value)
+                    }
                 }
             }
-            
-            let colums = Array(repeating: GridItem(.flexible()), count: 7)
-            LazyVGrid(columns: colums, spacing: 15) {
-                ForEach(extractDate()) { value in
-                    CardView(value: value)
-                }
+            .onChange(of: currentMonth) { newValue in
+                currentDate = getCurrentMonth()
             }
+            Spacer()
         }
-        .onChange(of: currentMonth) { newValue in
-            currentDate = getCurrentMonth()
+        .background {
+            BackgroundView()
         }
     }
     

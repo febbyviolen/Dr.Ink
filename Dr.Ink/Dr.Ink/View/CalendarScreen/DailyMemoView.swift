@@ -37,14 +37,14 @@ struct DailyMemoView: View {
                     .frame(width: UIScreen.main.bounds.height*3/10, height: UIScreen.main.bounds.height*3/10)
                     VStack {
                         if day.caffeineChallenge {
-                            Image("blue2")
+                            Image("blue")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
                                 .padding(.trailing, UIScreen.main.bounds.width*1/2)
                         }
                         if day.sugarChallenge {
-                            Image("purple1")
+                            Image("purple")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)

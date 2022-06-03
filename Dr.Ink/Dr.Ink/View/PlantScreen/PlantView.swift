@@ -70,14 +70,14 @@ struct PlantView: View {
                 VStack {
                     if let today = dailyWaterList.first {
                         if today.caffeineChallenge {
-                            Image("blue2")
+                            Image("blue")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
                                 .padding(.trailing, UIScreen.main.bounds.width*1/2)
                         }
                         if today.sugarChallenge {
-                            Image("purple1")
+                            Image("purple")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
