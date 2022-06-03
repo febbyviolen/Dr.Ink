@@ -18,7 +18,7 @@ struct DailyMemoView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.black)
                     .padding(.top, 100)
-                Text("이날의 달성도: \(Int((day.intake / day.goal)*100))%")
+                Text("이 날의 달성도: \(Int((day.intake / day.goal)*100))%")
                     .padding(.top, 5)
                 ZStack {
                     Image({
@@ -53,7 +53,7 @@ struct DailyMemoView: View {
                     }
                 }.padding(.bottom, 100)
             } else {
-                Text("이날 기록이 없습니다.")
+                Text("기록이 없습니다.")
             }
         }
     }

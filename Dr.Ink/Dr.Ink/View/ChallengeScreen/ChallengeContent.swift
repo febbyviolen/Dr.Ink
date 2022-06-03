@@ -62,8 +62,11 @@ struct ChallengeContent: View {
                                 userSetting.challenges.append(detail)
                             }
                             UserSetting.storeInUserDefaults()
-                            dailyWaterList.first!.caffeineChallenge = userSetting.challenges.contains(.rowCaffeine)
-                            dailyWaterList.first!.sugarChallenge = userSetting.challenges.contains(.sugarFree)
+                            if detail == .rowCaffeine {
+                                dailyWaterList.first!.caffeineChallenge = userSetting.challenges.contains(.rowCaffeine)
+                            } else if detail == .sugarFree {
+                                dailyWaterList.first!.sugarChallenge = userSetting.challenges.contains(.sugarFree)                                
+                            }
                         }
                     }
                 }

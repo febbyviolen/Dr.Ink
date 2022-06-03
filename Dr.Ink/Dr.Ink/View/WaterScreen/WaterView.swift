@@ -56,7 +56,7 @@ struct WaterView: View {
             AnotherButton
             Spacer()
             
-            ScrollView(.horizontal){
+            ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 50){
                     ForEach(drinks, id: \.self){drink in
                         ChooseDrink(drink: drink)
@@ -96,9 +96,10 @@ extension WaterView{
                 .frame(width: 61, height: 69)
                 .opacity(drink == drinkselected ? 1 : 0.3)
             Text(drink.label)
-                .foregroundColor(drink.color)
+                .foregroundColor(Color.black)
                 .fontWeight(.semibold)
                 .padding(.top, 10)
+                .opacity(drink == drinkselected ? 1 : 0.3)
         }
     }
     
@@ -134,14 +135,34 @@ extension WaterView{
                 .cornerRadius(24)
             
             Button(action: {
-                if userSetting.challenges.contains(.rowCaffeine) && drinkselected.caffeine {
-                    challengeMessage = "카페인이 포함된 음료를 드셨네요. 금일 챌린지는 실패했습니다."
+                if userSetting.challenges.contains(.rowCaffeine) && drinkselected.caffeine && userSetting.challenges.contains(.sugarFree) && drinkselected.sugar {
+                    challengeMessage = "카페인 및 설탕이 포함된 음료를 드셨네요. 금일 챌린지를 모두 실패했습니다."
                     showingAlert = true
-                    dailyWaterList.first!.setValue(false, forKey: "caffeineChallenge")
+                    do {
+                        dailyWaterList.first!.setValue(false, forKey: "caffeineChallenge")
+                        dailyWaterList.first!.setValue(false, forKey: "sugarChallenge")
+                        try context.save()
+                    } catch {
+                        print(error)
+                    }
+                } else if userSetting.challenges.contains(.rowCaffeine) && drinkselected.caffeine {
+                    challengeMessage = "카페인이 포함된 음료를 드셨네요. 금일 카페인 챌린지는 실패했습니다."
+                    showingAlert = true
+                    do {
+                        dailyWaterList.first!.setValue(false, forKey: "caffeineChallenge")
+                        try context.save()
+                    } catch {
+                        print(error)
+                    }
                 } else if userSetting.challenges.contains(.sugarFree) && drinkselected.sugar {
-                    challengeMessage = "설탕이 포함된 음료를 드셨네요. 금일 챌린지는 실패했습니다."
+                    challengeMessage = "설탕이 포함된 음료를 드셨네요. 금일 설탕 챌린지는 실패했습니다."
                     showingAlert = true
-                    dailyWaterList.first!.setValue(false, forKey: "sugerChallenge")
+                    do {
+                        dailyWaterList.first!.setValue(false, forKey: "sugarChallenge")
+                        try context.save()
+                    } catch {
+                        print(error)
+                    }
                 } else {
                     addButtonPressed()
                     shouldShowModal = false

@@ -18,7 +18,11 @@ struct ChallengeView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color("DarkDarkBlue"))
                 .font(.title)
-                
+                .padding(.bottom, 10)
+            
+            Text("챌린지를 유지하면 내 화분에 나비가 생겨요!")
+                .foregroundColor(Color("DarkDarkBlue"))
+                .font(.body)
 
             Button(action: {
                 modalContent = .challengeSugarFree
@@ -41,7 +45,7 @@ struct ChallengeView: View {
                 .frame(width: 350, height: 160)
                 .background(Color(red: 0.161, green: 0.349, blue: 0.51))
                 .cornerRadius(30)
-                .padding(.bottom, 40)
+                .padding(.bottom, 20)
             })
            
             

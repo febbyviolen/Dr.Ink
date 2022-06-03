@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 enum Drink: Hashable {
-    case water, greenTea, coffee
+    case water, greenTea, coffee, juice, beer, coke
     
     var imageName: String{
         switch self {
@@ -19,6 +19,12 @@ enum Drink: Hashable {
             return "GreenTeaImg"
         case .coffee:
             return "CoffeeImg"
+        case .juice:
+            return "JuiceImg"
+        case .beer:
+            return "BeerImg"
+        case .coke:
+            return "CokeImg"
         }
     }
     
@@ -30,6 +36,12 @@ enum Drink: Hashable {
             return "녹차"
         case .coffee:
             return "커피"
+        case .juice:
+            return "주스"
+        case .beer:
+            return "맥주"
+        case .coke:
+            return "콜라"
         }
     }
     
@@ -41,6 +53,12 @@ enum Drink: Hashable {
             return Color("LightGreen")
         case .coffee:
             return Color("CoffeeBrown")
+        case .juice:
+            return Color("JuiceColor")
+        case .beer:
+            return Color("BeerColor")
+        case .coke:
+            return Color("CokeColor")
         }
     }
     
@@ -51,6 +69,12 @@ enum Drink: Hashable {
         case .greenTea:
             return true
         case .coffee:
+            return true
+        case .juice:
+            return false
+        case .beer:
+            return false
+        case .coke:
             return true
         }
     }
@@ -63,6 +87,12 @@ enum Drink: Hashable {
             return false
         case .coffee:
             return false
+        case .juice:
+            return true
+        case .beer:
+            return false
+        case .coke:
+            return true
         }
     }
 }

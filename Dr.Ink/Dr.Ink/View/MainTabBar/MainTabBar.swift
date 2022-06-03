@@ -21,7 +21,7 @@ struct MainTabBar: View {
             VStack {
                 ZStack {
                     Spacer().fullScreenCover(isPresented: $shouldShowWaterFullScreen, content: {
-                            WaterView(shouldShowModal: $shouldShowWaterFullScreen, drinks: [.water, .greenTea, .coffee])
+                        WaterView(shouldShowModal: $shouldShowWaterFullScreen, drinks: [.water, .greenTea, .coffee, .juice, .beer, .coke])
                     })
                     
                     switch selectedIndex {
