@@ -14,6 +14,7 @@ struct MainTabBar: View {
     @State var shouldShowWaterFullScreen = false
     @State var shouldShowMainModal = false
     @State var modalContent: ModalContent?
+    @State var currentDate: Date = Date()
     
     var body: some View {
         ZStack {
@@ -27,7 +28,7 @@ struct MainTabBar: View {
                     case 0:
                         PlantView()
                     case 1:
-                        CalendarView(showModal: $shouldShowMainModal, modalContent: $modalContent)
+                        CalendarView(showModal: $shouldShowMainModal, modalContent: $modalContent, currentDate: $currentDate)
                     case 3:
                         ChallengeView(showModal: $shouldShowMainModal, modalContent: $modalContent)
                     case 4:

@@ -45,8 +45,12 @@ struct MainModal: View {
                         ActivitySettingView(shouldShowModal: $isShowing)
                     case .weatherSetting:
                         WeatherSettingView(shouldShowModal: $isShowing)
-                    case .dailyMemo:
-                        DailyMemoView()
+                    case .dailyMemo(let day):
+                        if let day = day {
+                            DailyMemoView(day: day)
+                        } else {
+                            DailyMemoView()
+                        }
                     default:
                         Text("Error")
                     }

@@ -15,5 +15,5 @@ enum ModalContent {
     case weightSetting
     case activitySetting
     case weatherSetting
-    case dailyMemo
+    case dailyMemo(day: DailyWater?)
 }

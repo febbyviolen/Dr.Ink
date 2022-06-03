@@ -34,6 +34,7 @@
 		8A5882152831D8BA005747C4 /* WeightSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5882142831D8BA005747C4 /* WeightSettingView.swift */; };
 		8A58821828336430005747C4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58821728336430005747C4 /* Date.swift */; };
 		8A58821A28338B20005747C4 /* DailyMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58821928338B20005747C4 /* DailyMemoView.swift */; };
+		8A991C7C284A3C0100CFA12C /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A991C7B284A3C0100CFA12C /* DateValue.swift */; };
 		8ACECFDA283CBBA8003C1601 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACECFD9283CBBA8003C1601 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		8A5882142831D8BA005747C4 /* WeightSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSettingView.swift; sourceTree = "<group>"; };
 		8A58821728336430005747C4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8A58821928338B20005747C4 /* DailyMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMemoView.swift; sourceTree = "<group>"; };
+		8A991C7B284A3C0100CFA12C /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		8ACECFD9283CBBA8003C1601 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				8A3301BB28288DDB0047B9C7 /* Drink.swift */,
 				8A3301DA2828944C0047B9C7 /* Challenge.swift */,
 				8A58820A2831CCD5005747C4 /* UserSetting.swift */,
+				8A991C7B284A3C0100CFA12C /* DateValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				8A58821828336430005747C4 /* Date.swift in Sources */,
 				8A3301C528288E420047B9C7 /* MainModal.swift in Sources */,
 				8A3301E228289AD70047B9C7 /* CalendarView.swift in Sources */,
+				8A991C7C284A3C0100CFA12C /* DateValue.swift in Sources */,
 				8A3301D228288E940047B9C7 /* MainTabBar.swift in Sources */,
 				8A3301DB2828944C0047B9C7 /* Challenge.swift in Sources */,
 			);
