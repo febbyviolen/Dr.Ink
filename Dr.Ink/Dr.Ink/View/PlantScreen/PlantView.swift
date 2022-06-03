@@ -68,11 +68,21 @@ struct PlantView: View {
                 .scaledToFit()
                 .frame(width: UIScreen.main.bounds.height*2/5, height: UIScreen.main.bounds.height*2/5)
                 VStack {
-                    if dailyWaterList.first!.caffeineChallenge {
-                        Text("카페인")
-                    }
-                    if dailyWaterList.first!.sugarChallenge {
-                        Text("무설탕")
+                    if let today = dailyWaterList.first {
+                        if today.caffeineChallenge {
+                            Image("blue2")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
+                                .padding(.trailing, UIScreen.main.bounds.width*1/2)
+                        }
+                        if today.sugarChallenge {
+                            Image("purple1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
+                                .padding(.leading, UIScreen.main.bounds.width*1/2)
+                        }
                     }
                 }
             }

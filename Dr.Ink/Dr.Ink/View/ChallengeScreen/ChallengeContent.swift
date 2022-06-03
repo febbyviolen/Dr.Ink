@@ -54,7 +54,7 @@ struct ChallengeContent: View {
                             .cornerRadius(10)
                     })
                     .padding(.bottom, 100)
-                    .alert(userSetting.challenges.contains(detail) ? "챌린지를 그만두시겠습니까?" : "챌린지를 시작하시겠습니까?", isPresented: $showingAlert) {
+                    .alert(userSetting.challenges.contains(detail) ? "챌린지를 그만두었습니다." : "챌린지를 시작하였습니다.", isPresented: $showingAlert) {
                         Button("OK", role: .cancel) {
                             if let idx = userSetting.challenges.firstIndex(of: detail) {
                                 userSetting.challenges.remove(at: idx)
