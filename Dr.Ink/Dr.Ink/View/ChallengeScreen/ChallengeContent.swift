@@ -77,6 +77,6 @@ struct ChallengeContent: View {
 
 struct ChallengeContent_Previews: PreviewProvider {
     static var previews: some View {
-        ChallengeContent(detail: .sugarFree)
+        ChallengeContent(detail: .sugarFree).environmentObject(UserSetting.shared)
     }
 }

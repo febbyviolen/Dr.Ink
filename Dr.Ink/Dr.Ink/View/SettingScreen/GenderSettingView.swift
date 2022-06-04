@@ -15,7 +15,7 @@ struct GenderSettingView: View {
         ZStack {
             Color("LightLightBlue")
                 .opacity(0.3)
-            VStack {
+            VStack(spacing: 10) {
                 Button(action: {
                     userSetting.gender = .man
                     shouldShowModal = false

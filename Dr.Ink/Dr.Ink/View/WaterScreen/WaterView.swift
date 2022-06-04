@@ -23,9 +23,9 @@ struct WaterView: View {
     @Binding var shouldShowModal: Bool
     let drinks: [Drink]
     
-    @State var progress : CGFloat = 0.0
+    @State var progress : CGFloat = 0.3
     @State var startAnimation : CGFloat = 0.0
-    @State var ml : Int = 0
+    @State var ml : Int = 300
     @State var fillColor = Color("LightLightBlue")
     @State var drinkselected : Drink = .water
     

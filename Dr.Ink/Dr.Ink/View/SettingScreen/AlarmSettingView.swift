@@ -18,13 +18,15 @@ struct AlarmSettingView: View {
         ZStack {
             Color("LightLightBlue")
                 .opacity(0.3)
-            VStack {
+            VStack(spacing:3) {
                 Toggle("ON/OFF", isOn: $onOff)
                     .padding(.horizontal, 50.0)
                     .frame(height: 60.0)
-                DatePicker("알람시간", selection: $time, displayedComponents: [.hourAndMinute])
+                    .font(.body)
+                DatePicker("알람 시간", selection: $time, displayedComponents: [.hourAndMinute])
                     .padding(.horizontal, 50.0)
                     .frame(height: 60.0)
+                    .font(.body)
                 Button(action: {
                     if onOff {
                         NotificationManager.shared.setAlarm(date: time)
@@ -38,11 +40,15 @@ struct AlarmSettingView: View {
                     Text("저장")
                         .fontWeight(.bold)
                         .foregroundColor(.black)
-                        .padding(/*@START_MENU_TOKEN@*/.all, 9.0/*@END_MENU_TOKEN@*/)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
                         .background(Color("Blue"))
                         .cornerRadius(10)
-                })
+                        
+                }).padding(.horizontal, 45)
+                    .padding(.vertical)
             }
+            
         }.onAppear {
             time = userSetting.alarm.time
             onOff = userSetting.alarm.onOff
