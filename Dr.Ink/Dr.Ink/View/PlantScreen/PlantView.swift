@@ -20,6 +20,7 @@ struct PlantView: View {
     
     @State var startAnimation: CGFloat = 0.0
     @State var goal: Int = 2000
+    @State var animate: Bool = true
     
     var body: some View {
         VStack(spacing: 10){
@@ -70,18 +71,33 @@ struct PlantView: View {
                 VStack {
                     if let today = dailyWaterList.first {
                         if today.caffeineChallenge {
-                            Image("blue")
+                            Image(animate ? "Blue" : "Blue2")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
                                 .padding(.trailing, UIScreen.main.bounds.width*1/2)
+                                .onAppear{
+                                    DispatchQueue.main.async{
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                            animation()
+                                        }
+                                    }
+                                }
+                                
                         }
                         if today.sugarChallenge {
-                            Image("purple")
+                            Image(animate ? "Purple" : "Purple2")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
                                 .padding(.leading, UIScreen.main.bounds.width*1/2)
+                                .onAppear{
+                                    DispatchQueue.main.async{
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                            animation()
+                                        }
+                                    }
+                                }
                         }
                     }
                 }
@@ -115,4 +131,12 @@ struct Main__Previews: PreviewProvider {
     }
 }
 
+extension PlantView{
+    func animation(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            animate.toggle()
+            animation()
+        }
+    }
+}
 

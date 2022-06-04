@@ -21,7 +21,9 @@ struct WeightSettingView: View {
                         Text("\($0)")
                     }
                 }
-                Text("현재상태 : \(userSetting.weight)kg")
+                Text("현재 상태 :   \(userSetting.weight)kg")
+                    .fontWeight(.semibold)
+                    .font(.body)
             }
             .pickerStyle(WheelPickerStyle())
         }

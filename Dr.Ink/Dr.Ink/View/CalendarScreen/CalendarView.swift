@@ -39,6 +39,7 @@ struct CalendarView: View {
                     } label: {
                         Image(systemName: "chevron.left")
                             .font(.title2)
+                            .foregroundColor(Color.black)
                     }
                     Button {
                         withAnimation {
@@ -47,6 +48,7 @@ struct CalendarView: View {
                     } label: {
                         Image(systemName: "chevron.right")
                             .font(.title2)
+                            .foregroundColor(Color.black)
                     }
                 }.padding(.horizontal)
                 
