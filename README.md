@@ -11,17 +11,11 @@
 - 201913733 페비
 - 201914183 정충효
 
-# 개발기간
-
-- 2022.05.03 ~
-
 # 사용기술
 
 - SwiftUI
 - CoreData
 
-# 진행상황
+# 시연영상
 
-<img src="https://user-images.githubusercontent.com/70463738/167393450-f36948b9-9a7b-4281-8c33-a33ee3c1d4f9.gif" width=200>
-
-현재(2022.05.09)까지의 개발상태
+- https://www.youtube.com/watch?v=BgsIF-Q32Sg
