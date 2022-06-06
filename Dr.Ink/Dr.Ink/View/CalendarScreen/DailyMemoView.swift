@@ -20,8 +20,13 @@ struct DailyMemoView: View {
                     .padding(.top, 100)
                 Text("이 날의 달성도: \(Int((day.intake / day.goal)) > 1 ? 100 : Int((day.intake / day.goal))*100)%")
                     .padding(.top, 5)
-                Text("\(Int(day.intake)) / \(Int(day.goal)) ml")
-                    .padding(.top, 2)
+                HStack {
+                    Text("\(Int(day.intake))")
+                        .bold()
+                        .padding(.top, 2)
+                    Text("/ \(Int(day.goal)) ml")
+                        .padding(.top, 2)
+                }
                 ZStack {
                     Image({
                         if (day.intake / day.goal) < 0.4 {
