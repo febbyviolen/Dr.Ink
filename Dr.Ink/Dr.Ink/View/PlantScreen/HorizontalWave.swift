@@ -27,7 +27,7 @@ struct HorizontalWave: View {
             let size = proxy.size
             
             ZStack{
-                wave(progress: CGFloat((dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal)), waveHeight: 0.02, offset: startAnimation)
+                wave(progress: (CGFloat((dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal))) > 1 ? 1 : (CGFloat((dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal))), waveHeight: 0.02, offset: startAnimation)
                     .fill(Color("LightLightBlue"))
                     .mask{
                         Rectangle()
@@ -87,8 +87,4 @@ struct wave: Shape {
             path.addLine(to: CGPoint(x: 0, y: rect.height))
         }
     }
-}
-
-extension HorizontalWave{
-
 }

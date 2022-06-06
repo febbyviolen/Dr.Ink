@@ -45,7 +45,7 @@ struct PlantView: View {
                 
                 HStack(){
                     Spacer()
-                    Text("\(Int((dailyWaterList.first == nil ? 0 : dailyWaterList.first!.intake) * 100 / (dailyWaterList.first == nil ? 1 : dailyWaterList.first!.goal)))%")
+                    Text("\(Int(dailyWaterList.first == nil ? 0 : (dailyWaterList.first!.intake / dailyWaterList.first!.goal) >= 1.0 ? 100 : (dailyWaterList.first!.intake*100 / dailyWaterList.first!.goal)))%")
                         .bold()
                         .font(.title3)
                         .foregroundColor(Color("DarkDarkBlue"))
@@ -71,7 +71,7 @@ struct PlantView: View {
                 VStack {
                     if let today = dailyWaterList.first {
                         if today.caffeineChallenge {
-                            Image(animate ? "Blue" : "Blue2")
+                            Image(animate ? "blue" : "blue2")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
@@ -86,7 +86,7 @@ struct PlantView: View {
                                 
                         }
                         if today.sugarChallenge {
-                            Image(animate ? "Purple" : "Purple2")
+                            Image(animate ? "purple" : "purple2")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: UIScreen.main.bounds.height*1/20, height: UIScreen.main.bounds.height*1/20)
@@ -133,8 +133,8 @@ struct Main__Previews: PreviewProvider {
 
 extension PlantView{
     func animation(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-            animate.toggle()
+        animate.toggle()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             animation()
         }
     }
