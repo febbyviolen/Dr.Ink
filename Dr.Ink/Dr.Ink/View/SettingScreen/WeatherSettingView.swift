@@ -40,7 +40,7 @@ struct WeatherSettingView: View {
                 }, label: {
                     Image(systemName :"cloud.sun")
                         .foregroundColor(Color.black)
-                    Text("더움")
+                    Text("따뜻함")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
@@ -56,7 +56,7 @@ struct WeatherSettingView: View {
                 }, label: {
                     Image(systemName :"wind")
                         .foregroundColor(Color.black)
-                    Text("더움")
+                    Text("시원함")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)
@@ -72,7 +72,7 @@ struct WeatherSettingView: View {
                 }, label: {
                     Image(systemName :"snowflake")
                         .foregroundColor(Color.black)
-                    Text("더움")
+                    Text("추움")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .foregroundColor(.black)

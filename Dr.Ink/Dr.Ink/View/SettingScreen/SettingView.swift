@@ -23,15 +23,7 @@ struct SettingView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-//            HStack(){
-//                Text("설정")
-//                    .font(.largeTitle)
-//                    .bold()
-//                    .padding(.leading, 30.0)
-//                Spacer()
-//            }
-                
+            Spacer()                
             LazyVStack {
                 ForEach(0..<5) { idx in
                     Button(action: {
