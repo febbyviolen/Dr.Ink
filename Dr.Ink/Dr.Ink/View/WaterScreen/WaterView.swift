@@ -107,8 +107,8 @@ extension WaterView{
         VStack{
             Button(action: {
                 if ml < 1000 {
-                    progress = progress + 0.1
-                    ml += 100
+                    progress = progress + 0.05
+                    ml += 50
                 }
             },label:{
                 Image("PlusWaterBtn")
@@ -116,8 +116,8 @@ extension WaterView{
             
             Button(action: {
                 if ml > 0 {
-                    progress = progress - 0.1
-                    ml = ml - 100
+                    progress = progress - 0.05
+                    ml = ml - 50
                 }
             },label:{
                 Image("MinWaterBtn")
